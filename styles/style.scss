@@ -47,6 +47,8 @@ body{
         height: 100vh;
         backdrop-filter: blur(10px);
         background-color: transparent;
+        overflow-x: hidden;
+        overflow-y: auto;
         .titleDiv{
             width: 100vw;
             height: 50px;
@@ -87,6 +89,9 @@ body{
                 margin-right: 2%;
 
                 .newest{
+                    i{
+                        font-size: 19px;
+                    }
                     &::before{
                         content: "";
                         display: inline-block;
@@ -106,6 +111,7 @@ body{
                         opacity: 0.3;
                         backdrop-filter: blur(10px);
                         transition: .1s;
+                        cursor: default;
                     }
 
                     &:hover{
@@ -124,6 +130,7 @@ body{
                     position: relative;
                     i{
                         transition: .2s;
+                        font-size: 14px;
                     }
                     a{
                         text-decoration: none;
@@ -147,6 +154,17 @@ body{
                         }
                     }
                 }
+            }
+            .OpenMobileNav{
+                border: 0;
+                color: white;
+                background-color: transparent;
+                font-size: 23px;
+                width: 50px;
+                height: 50px;
+                margin-right: 1%;
+                cursor: pointer;
+                display: none;
             }
         }
     }

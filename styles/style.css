@@ -62,6 +62,8 @@ body {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background-color: transparent;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .landing-container .landing .titleDiv {
@@ -125,6 +127,10 @@ body {
   margin-right: 2%;
 }
 
+.landing-container .landing .titleDiv ul .newest i {
+  font-size: 19px;
+}
+
 .landing-container .landing .titleDiv ul .newest::before {
   content: "";
   display: inline-block;
@@ -146,6 +152,7 @@ body {
           backdrop-filter: blur(10px);
   -webkit-transition: .1s;
   transition: .1s;
+  cursor: default;
 }
 
 .landing-container .landing .titleDiv ul .newest:hover .newest-list {
@@ -166,6 +173,7 @@ body {
 .landing-container .landing .titleDiv ul li i {
   -webkit-transition: .2s;
   transition: .2s;
+  font-size: 14px;
 }
 
 .landing-container .landing .titleDiv ul li a {
@@ -190,5 +198,17 @@ body {
 
 .landing-container .landing .titleDiv ul li:hover::after {
   width: 100%;
+}
+
+.landing-container .landing .titleDiv .OpenMobileNav {
+  border: 0;
+  color: white;
+  background-color: transparent;
+  font-size: 23px;
+  width: 50px;
+  height: 50px;
+  margin-right: 1%;
+  cursor: pointer;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
