@@ -44,7 +44,7 @@ body {
 .landing-container {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/Reading.jpg");
+  background-image: url("../images/book related.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,8 +59,136 @@ body {
 .landing-container .landing {
   width: 100vw;
   height: 100vh;
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   background-color: transparent;
+}
+
+.landing-container .landing .titleDiv {
+  width: 100vw;
+  height: 50px;
+  background-color: transparent;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.landing-container .landing .titleDiv .title {
+  background-color: #b33e52;
+  width: 50px;
+  height: 60px;
+  font-size: 40px;
+  position: relative;
+  color: white;
+  margin-left: 2%;
+}
+
+.landing-container .landing .titleDiv .title::after {
+  content: "Pearl C";
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.landing-container .landing .titleDiv ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 550px;
+  height: 40px;
+  margin-right: 2%;
+}
+
+.landing-container .landing .titleDiv ul .newest::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50px;
+}
+
+.landing-container .landing .titleDiv ul .newest .newest-list {
+  width: 200px;
+  height: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  opacity: 0.3;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  -webkit-transition: .1s;
+  transition: .1s;
+}
+
+.landing-container .landing .titleDiv ul .newest:hover .newest-list {
+  height: 70px;
+}
+
+.landing-container .landing .titleDiv ul .newest:hover i {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  color: white;
+}
+
+.landing-container .landing .titleDiv ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+.landing-container .landing .titleDiv ul li i {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.landing-container .landing .titleDiv ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+}
+
+.landing-container .landing .titleDiv ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #b33e52;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.landing-container .landing .titleDiv ul li:hover i {
+  color: #b33e52;
+}
+
+.landing-container .landing .titleDiv ul li:hover::after {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

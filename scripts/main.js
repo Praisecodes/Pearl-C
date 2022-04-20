@@ -1,1 +1,2 @@
-console.log("Starting On Pearl's Blog");
+const newest = document.querySelector(".newest");
+

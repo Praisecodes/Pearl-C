@@ -33,7 +33,7 @@ body{
 .landing-container{
     width: 100vw;
     height: 100vh;
-    background-image: url("../images/Reading.jpg");
+    background-image: url("../images/book related.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,7 +45,109 @@ body{
     .landing{
         width: 100vw;
         height: 100vh;
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(10px);
         background-color: transparent;
+        .titleDiv{
+            width: 100vw;
+            height: 50px;
+            background-color: transparent;
+            position: sticky;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            .title{
+                background-color: #b33e52;
+                width: 50px;
+                height: 60px;
+                font-size: 40px;
+                position: relative;
+                color: white;
+                margin-left: 2%;
+                &::after{
+                    content: "Pearl C";
+                    display: inline-block;
+                    width: 150px;
+                    height: 40px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+            ul{
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 550px;
+                height: 40px;
+                margin-right: 2%;
+
+                .newest{
+                    &::before{
+                        content: "";
+                        display: inline-block;
+                        width: 8px;
+                        height: 8px;
+                        background-color: red;
+                        border-radius: 50px;
+                    }
+
+                    .newest-list{
+                        width: 200px;
+                        height: 0;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: white;
+                        opacity: 0.3;
+                        backdrop-filter: blur(10px);
+                        transition: .1s;
+                    }
+
+                    &:hover{
+                        .newest-list{
+                            height: 70px;
+                        }
+                        i{
+                            transform: rotate(180deg);
+                            color: white;
+                        }
+                    }
+                }
+
+                li{
+                    cursor: pointer;
+                    position: relative;
+                    i{
+                        transition: .2s;
+                    }
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 19px;
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 3px;
+                        background-color: #b33e52;
+                        transition: .2s;
+                    }
+                    &:hover{
+                        i{
+                            color: #b33e52;
+                        }
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
