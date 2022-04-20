@@ -167,5 +167,73 @@ body{
                 display: none;
             }
         }
+        .mainContent{
+            width: 100vw;
+            height: calc(100vh - 50px);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            overflow: hidden;
+            justify-content: space-between;
+            .welcomeMessage{
+                width: 60vw;
+                padding-left: 20px;
+                .large{
+                    font-size: 90px;
+                    color: white;
+                    margin: 0;
+                }
+                .IntroduceSelf{
+                    font-size: 30px;
+                    color: white;
+                    .name{
+                        background-color: #b33e52aa;
+                        color: white;
+                    }
+                    .writer{
+                        color: #b33e52;
+                    }
+                }
+            }
+            .introMessage{
+                width: 25vw;
+                border-right: 5px solid #b33e52;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                height: 70vh;
+                background-color: #ffffff22;
+                margin-right: 1%;
+                color: white;
+                padding: 10px;
+                backdrop-filter: blur(10px);
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                .header{
+                    color: white;
+                    font-size: 18px;
+                    width: fit-content;
+                    &::after{
+                        content: "";
+                        width: 100%;
+                        height: 4px;
+                        display: block;
+                        background-color: #b33e52;
+                    }
+                }
+                p{
+                    font-size: 17px;
+                    a{
+                        color: white;
+                        transition: .1s;
+                        &:hover{
+                            color: #b33e52;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
