@@ -8,17 +8,59 @@
   margin: 0;
 }
 
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: fadin .9s;
+          animation: fadin .9s;
+}
+
 body {
   font-size: 16px;
   font-family: "Poppins";
+  opacity: 1;
+  -webkit-animation: fadein .8s;
+          animation: fadein .8s;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.landing {
+.landing-container {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/Reading image.jpg");
+  background-image: url("../images/Reading.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.landing-container::-webkit-scrollbar {
+  display: none;
+}
+
+.landing-container .landing {
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

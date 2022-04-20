@@ -8,16 +8,44 @@
     margin: 0;
 }
 
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.fadeIn{
+    animation: fadin .9s;
+}
+
 body{
     font-size: 16px;
     font-family: "Poppins";
+    opacity: 1;
+    animation: fadein .8s;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
-.landing{
+.landing-container{
     width: 100vw;
     height: 100vh;
-    background-image: url("../images/Reading image.jpg");
+    background-image: url("../images/Reading.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .landing{
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(8px);
+        background-color: transparent;
+    }
 }
