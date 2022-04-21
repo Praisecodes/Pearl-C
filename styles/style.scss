@@ -60,7 +60,7 @@ body{
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(40px);
             .title{
                 background-color: #b33e52;
                 width: 50px;
@@ -90,7 +90,7 @@ body{
 
                 .newest{
                     i{
-                        font-size: 19px;
+                        font-size: 17px;
                     }
                     &::before{
                         content: "";
@@ -135,7 +135,7 @@ body{
                     a{
                         text-decoration: none;
                         color: white;
-                        font-size: 19px;
+                        font-size: 17px;
                     }
                     &::after{
                         content: "";
@@ -180,12 +180,12 @@ body{
                 width: 60vw;
                 padding-left: 20px;
                 .large{
-                    font-size: 90px;
+                    font-size: 80px;
                     color: white;
                     margin: 0;
                 }
                 .IntroduceSelf{
-                    font-size: 30px;
+                    font-size: 20px;
                     color: white;
                     .name{
                         background-color: #b33e52aa;
@@ -197,13 +197,13 @@ body{
                 }
             }
             .introMessage{
-                width: 25vw;
+                width: 20vw;
                 border-right: 5px solid #b33e52;
                 overflow-x: hidden;
                 overflow-y: scroll;
-                height: 70vh;
-                background-color: #ffffff22;
-                margin-right: 1%;
+                height: 65vh;
+                background-color: #ffffff11;
+                margin-right: 3%;
                 color: white;
                 padding: 10px;
                 backdrop-filter: blur(10px);
@@ -212,7 +212,7 @@ body{
                 }
                 .header{
                     color: white;
-                    font-size: 18px;
+                    font-size: 16px;
                     width: fit-content;
                     &::after{
                         content: "";
@@ -223,7 +223,7 @@ body{
                     }
                 }
                 p{
-                    font-size: 17px;
+                    font-size: 15px;
                     a{
                         color: white;
                         transition: .1s;
@@ -231,6 +231,58 @@ body{
                             color: #b33e52;
                             text-decoration: none;
                         }
+                    }
+                }
+            }
+        }
+        .contactDiv{
+            width: 100%;
+            background-color: #b33e52dd;
+            height: 70vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            .subscribe{
+                width: 50%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                h3{
+                    font-size: 25px;
+                }
+                .subscribeForm{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .email{
+                        width: 300px;
+                        height: 40px;
+                        background-color: transparent;
+                        border-bottom: 2px solid white;
+                        outline: none;
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                        font-size: 16px;
+                        color: white;
+                        padding: 5px;
+                    }
+                    .submitEmail{
+                        border: 0;
+                        width: 200px;
+                        height: 40px;
+                        font-size: 17px;
+                        outline: none;
+                        background-color: #c41e7f;
+                        color: white;
+                        cursor: pointer;
                     }
                 }
             }
