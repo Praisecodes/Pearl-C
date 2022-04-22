@@ -60,6 +60,7 @@ body{
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            z-index: 1000;
             backdrop-filter: blur(40px);
             .title{
                 background-color: #b33e52;
@@ -238,7 +239,7 @@ body{
         .contactDiv{
             width: 100%;
             background-color: #b33e52dd;
-            height: 70vh;
+            // height: 70vh;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -283,6 +284,90 @@ body{
                         background-color: #c41e7f;
                         color: white;
                         cursor: pointer;
+                        font-family: "Poppins";
+                    }
+                }
+            }
+            .mainContact{
+                width: 50%;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                h4{
+                    color: white;
+                    font-size: 25px;
+                    margin-top: 20px;
+                }
+                .sendEmail{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        width: 250px;
+                        height: 40px;
+                        padding: 5px;
+                        background-color: transparent;
+                        border-bottom: 2px solid white;
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                        outline: none;
+                        transition: .2s;
+                        color: white;
+                        margin-bottom: 8px;
+                        &:focus{
+                            background-color: #ffffff44;
+                        }
+                    }
+                    textarea{
+                        width: 252px;
+                        border-top: 0;
+                        border-bottom: 0;
+                        border-right: 0;
+                        background-color: transparent;
+                        border-left: 3px solid #ffffff44;
+                        color: white;
+                        outline: none;
+                        height: 290px;
+                        padding: 5px;
+                        margin-bottom: 8px;
+                        transition: .2s;
+                        font-family: "Poppins";
+                        &:focus{
+                            background-color: #ffffff44;
+                        }
+                    }
+                    .sendEmailBtn{
+                        border: 0;
+                        color: white;
+                        background-color: #c41e7f;
+                        width: 200px;
+                        height: 40px;
+                        outline: none;
+                        cursor: pointer;
+                        font-size: 17px;
+                        font-family: "Poppins";
+                    }
+                }
+                .socials{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    i{
+                        font-size: 20px;
+                        color: white;
+                        transition: .2s;
+                        cursor: pointer;
+                        &:hover{
+                            color: #c41e7f;
+                        }
                     }
                 }
             }

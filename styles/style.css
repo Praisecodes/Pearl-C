@@ -87,6 +87,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1000;
   -webkit-backdrop-filter: blur(40px);
           backdrop-filter: blur(40px);
 }
@@ -310,7 +311,6 @@ body {
 .landing-container .landing .contactDiv {
   width: 100%;
   background-color: #b33e52dd;
-  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -393,5 +393,132 @@ body {
   background-color: #c41e7f;
   color: white;
   cursor: pointer;
+  font-family: "Poppins";
+}
+
+.landing-container .landing .contactDiv .mainContact {
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.landing-container .landing .contactDiv .mainContact h4 {
+  color: white;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail input {
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail input:focus {
+  background-color: #ffffff44;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail textarea {
+  width: 252px;
+  border-top: 0;
+  border-bottom: 0;
+  border-right: 0;
+  background-color: transparent;
+  border-left: 3px solid #ffffff44;
+  color: white;
+  outline: none;
+  height: 290px;
+  padding: 5px;
+  margin-bottom: 8px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-family: "Poppins";
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail textarea:focus {
+  background-color: #ffffff44;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail .sendEmailBtn {
+  border: 0;
+  color: white;
+  background-color: #c41e7f;
+  width: 200px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: "Poppins";
+}
+
+.landing-container .landing .contactDiv .mainContact .socials {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.landing-container .landing .contactDiv .mainContact .socials i {
+  font-size: 20px;
+  color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.landing-container .landing .contactDiv .mainContact .socials i:hover {
+  color: #c41e7f;
 }
 /*# sourceMappingURL=style.css.map */
