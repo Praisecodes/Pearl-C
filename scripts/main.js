@@ -24,7 +24,7 @@ subscribeForm.addEventListener("submit", (e) =>{
     if(!(email.value == "")){
         submitEmail.disabled = true;
 
-        fetch("http://localhost/pearlc/api/subscribe.php", {
+        fetch("./api/subscribe.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
