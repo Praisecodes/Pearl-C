@@ -22,8 +22,27 @@ subscribeForm.addEventListener("submit", (e) =>{
     e.preventDefault();
 
     if(!(email.value == "")){
-        window.location = "./read/";
         submitEmail.disabled = true;
+
+        fetch("http://localhost/pearlc/api/subscribe.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "Email": email.value
+            })
+        })
+        .then(res=>res.json())
+        .then((data)=>{
+            if(data == "Success"){
+                email.value = "";
+                submitEmail.disabled = false;
+            }
+            else{
+                console.log(data);
+            }
+        });
     }
     else{
         console.log("No No!!");
