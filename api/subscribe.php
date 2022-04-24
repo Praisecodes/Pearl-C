@@ -21,9 +21,9 @@
         $conn = new mysqli($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
         // $conn = new mysqli("localhost", "root", "", "pearlcdb");
         if($conn->connect_error){
-            die(json_encode([
+            echo json_encode([
                 "Error" . $conn->connect_error
-            ], true));
+            ], true);
         }
         else{
             $sql = "INSERT INTO emails_subscribed(emails) VALUES (?);";
@@ -39,17 +39,17 @@
                 $conn->close();
             }
             else{
-                die(json_encode([
+                echo json_encode([
                     "Error"
-                ], true));
+                ], true);
                 $stmt->close();
                 $conn->close();
             }
         }
     }
     else{
-        echo (json_encode([
+        echo json_encode([
             "Nope!!"
-        ], true));
+        ], true);
     }
 ?>
