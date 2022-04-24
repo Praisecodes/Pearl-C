@@ -29,21 +29,27 @@
             $sql = "INSERT INTO emails_subscribed(emails) VALUES (?);";
 
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s", $decoded["Email"]);
+            if($stmt->bind_param("s", $decoded["Email"])){
 
-            if($stmt->execute()){
-                echo json_encode([
-                    "Success"
-                ], true);
-                $stmt->close();
-                $conn->close();
+                if($stmt->execute()){
+                    echo json_encode([
+                        "Success"
+                    ], true);
+                    $stmt->close();
+                    $conn->close();
+                }
+                else{
+                    die(json_encode([
+                        "Error"
+                    ], true));
+                    $stmt->close();
+                    $conn->close();
+                }
             }
             else{
-                die(json_encode([
-                    "Error"
-                ], true));
-                $stmt->close();
-                $conn->close();
+                echo json_encode([
+                    "Error With Bind Param"
+                ], true);
             }
         }
     }
