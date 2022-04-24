@@ -10,8 +10,13 @@
         $decoded = json_decode($contents, true);
 
         // Create Connection With Database And Store All Subscribed Emails.
+        $servername = "sql306.epizy.com";
+        $username = "epiz_31583479";
+        $password = "NKq8b0FOwoBiN";
+        $databasename = "epiz_31583479_pearlcdb";
 
-        $conn = new mysqli("localhost", "root", "", "pearlcdb");
+        $conn = new mysqli($servername, $username, $password, $databasename);
+        // $conn = new mysqli("localhost", "root", "", "pearlcdb");
         if($conn->connect_error){
             die(json_encode([
                 "Error" . $conn->connect_error
