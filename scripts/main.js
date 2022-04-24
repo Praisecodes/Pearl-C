@@ -35,7 +35,7 @@ subscribeForm.addEventListener("submit", (e) =>{
         })
         .then(res=>{
             // console.log(res);
-            res.json()
+            res.json();
         })
         .then((data)=>{
             if(data == "Success"){
@@ -46,9 +46,9 @@ subscribeForm.addEventListener("submit", (e) =>{
                 console.log(data);
             }
         })
-        // .catch((error) => {
-        //     console.log(error);
-        // });
+        .catch((error) => {
+            console.log(error);
+        });
     }
     else{
         console.log("No No!!");
