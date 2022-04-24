@@ -42,6 +42,9 @@ subscribeForm.addEventListener("submit", (e) =>{
             else{
                 email.value = data;
             }
+        })
+        .catch((error) => {
+            console.log(error);
         });
     }
     else{
