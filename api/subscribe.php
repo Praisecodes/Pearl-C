@@ -18,7 +18,7 @@
         $cleardb_password = $cleardb_url["pass"];
         $cleardb_db = substr($cleardb_url["path"],1);
 
-        $conn = new mysqli($cleardb_url, $cleardb_username, $cleardb_password, $cleardb_db);
+        $conn = new mysqli($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
         // $conn = new mysqli("localhost", "root", "", "pearlcdb");
         if($conn->connect_error){
             die(json_encode([
