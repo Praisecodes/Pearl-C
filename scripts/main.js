@@ -40,7 +40,7 @@ subscribeForm.addEventListener("submit", (e) =>{
                 submitEmail.disabled = false;
             }
             else{
-                console.log(data);
+                email.value = data;
             }
         });
     }
