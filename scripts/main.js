@@ -33,7 +33,10 @@ subscribeForm.addEventListener("submit", (e) =>{
                 "Email": email.value
             })
         })
-        .then(res=>res.json())
+        .then(res=>{
+            console.log(res);
+            //res.json()
+        })
         .then((data)=>{
             if(data == "Success"){
                 email.value = "";
