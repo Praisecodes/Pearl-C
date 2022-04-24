@@ -34,7 +34,7 @@ subscribeForm.addEventListener("submit", (e) =>{
             })
         })
         .then(res=>{
-            // console.log(res);
+            console.log(res);
             res.json()
         })
         .then((data)=>{
