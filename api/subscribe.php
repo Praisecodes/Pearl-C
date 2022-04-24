@@ -10,12 +10,15 @@
         $decoded = json_decode($contents, true);
 
         // Create Connection With Database And Store All Subscribed Emails.
-        $servername = "sql306.epizy.com";
-        $username = "epiz_31583479";
-        $password = "NKq8b0FOwoBiN";
-        $databasename = "epiz_31583479_pearlcdb";
 
-        $conn = new mysqli($servername, $username, $password, $databasename);
+        //Get Heroku ClearDB connection information
+        $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $cleardb_server = $cleardb_url["host"];
+        $cleardb_username = $cleardb_url["user"];
+        $cleardb_password = $cleardb_url["pass"];
+        $cleardb_db = substr($cleardb_url["path"],1);
+
+        $conn = new mysqli($cleardb_url, $cleardb_username, $cleardb_password, $cleardb_db);
         // $conn = new mysqli("localhost", "root", "", "pearlcdb");
         if($conn->connect_error){
             die(json_encode([
