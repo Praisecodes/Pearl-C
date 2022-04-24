@@ -34,8 +34,8 @@ subscribeForm.addEventListener("submit", (e) =>{
             })
         })
         .then(res=>{
-            console.log(res);
-            //res.json()
+            // console.log(res);
+            res.json()
         })
         .then((data)=>{
             if(data == "Success"){
@@ -43,7 +43,7 @@ subscribeForm.addEventListener("submit", (e) =>{
                 submitEmail.disabled = false;
             }
             else{
-                email.value = data;
+                console.log(data);
             }
         })
         .catch((error) => {
