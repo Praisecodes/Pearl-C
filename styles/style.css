@@ -512,7 +512,7 @@ body {
 }
 
 .landing-container .landing .contactDiv .mainContact .sendEmail input:focus {
-  background-color: #ffffff44;
+  background-color: #ffffff22;
 }
 
 .landing-container .landing .contactDiv .mainContact .sendEmail input::-webkit-input-placeholder {
@@ -549,7 +549,7 @@ body {
 }
 
 .landing-container .landing .contactDiv .mainContact .sendEmail textarea:focus {
-  background-color: #ffffff44;
+  background-color: #ffffff22;
 }
 
 .landing-container .landing .contactDiv .mainContact .sendEmail textarea::-webkit-input-placeholder {
