@@ -23,6 +23,7 @@ subscribeForm.addEventListener("submit", (e) =>{
 
     if(!(email.value == "")){
         submitEmail.disabled = true;
+        submitEmail.innerHTML = '<i class="fa fa-loader"></i>';
 
         fetch("./api/subscribe.php", {
             method: "POST",
@@ -37,7 +38,13 @@ subscribeForm.addEventListener("submit", (e) =>{
         .then((data)=>{
             if(data == "Success"){
                 email.value = "";
-                submitEmail.disabled = false;
+                submitEmail.innerHTML = `<i class="fa fa-badge-check"></i>`;
+                setTimeout(()=>{
+                    submitEmail.innerHTML = `Subscribe <i class="fa fa-bell">`;
+                    setTimeout(()=>{
+                        submitEmail.disabled = false;
+                    }, 100);
+                }, 200);
             }
             else{
                 console.log(data);

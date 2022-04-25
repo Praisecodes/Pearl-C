@@ -26,6 +26,28 @@
   }
 }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 .fadeIn {
   -webkit-animation: fadin .9s;
           animation: fadin .9s;
@@ -394,6 +416,15 @@ body {
   color: white;
   cursor: pointer;
   font-family: "Poppins";
+}
+
+.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-loader {
+  -webkit-animation: spin .5s infinite;
+          animation: spin .5s infinite;
+}
+
+.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-badge-check {
+  color: #40e240;
 }
 
 .landing-container .landing .contactDiv .mainContact {

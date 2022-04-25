@@ -17,6 +17,15 @@
     }
 }
 
+@keyframes spin{
+    0%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 .fadeIn{
     animation: fadin .9s;
 }
@@ -285,6 +294,12 @@ body{
                         color: white;
                         cursor: pointer;
                         font-family: "Poppins";
+                        .fa-loader{
+                            animation: spin .5s infinite;
+                        }
+                        .fa-badge-check{
+                            color: #40e240;
+                        }
                     }
                 }
             }
