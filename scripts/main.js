@@ -23,7 +23,7 @@ subscribeForm.addEventListener("submit", (e) =>{
 
     if(!(email.value == "")){
         submitEmail.disabled = true;
-        submitEmail.innerHTML = '<i class="fa fa-loader"></i>';
+        submitEmail.innerHTML = '<i class="fa fa-spinner"></i>';
 
         fetch("./api/subscribe.php", {
             method: "POST",

@@ -418,7 +418,7 @@ body {
   font-family: "Poppins";
 }
 
-.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-loader {
+.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-spinner {
   -webkit-animation: spin .5s infinite;
           animation: spin .5s infinite;
 }
