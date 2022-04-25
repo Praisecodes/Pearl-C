@@ -1,6 +1,11 @@
 <?php
     header("Access-Control-Allow-Origin: *");
     header("Content-Type: application/json");
+    use PHPMailer\PHPMailer\PHPMailer;
+
+    require_once "../libs/PHPMailer/PHPMailer.php";
+    require_once "../libs/PHPMailer/Exception.php";
+    require_once "../libs/PHPMailer/SMTP.php";
 
     $ContentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : "not set";
 
