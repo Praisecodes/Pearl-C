@@ -423,7 +423,7 @@ body {
           animation: spin .5s infinite;
 }
 
-.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-badge-check {
+.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-circle-check {
   color: #40e240;
 }
 
