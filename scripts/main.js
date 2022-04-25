@@ -44,7 +44,7 @@ subscribeForm.addEventListener("submit", (e) =>{
                     setTimeout(()=>{
                         submitEmail.disabled = false;
                     }, 100);
-                }, 200);
+                }, 2000);
             }
             else{
                 console.log(data);
