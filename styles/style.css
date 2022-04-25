@@ -414,6 +414,22 @@ body {
   padding: 5px;
 }
 
+.landing-container .landing .contactDiv .subscribe .subscribeForm .email::-webkit-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .subscribe .subscribeForm .email:-ms-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .subscribe .subscribeForm .email::-ms-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .subscribe .subscribeForm .email::placeholder {
+  color: #ffffff77;
+}
+
 .landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail {
   border: 0;
   width: 200px;
@@ -499,11 +515,27 @@ body {
   background-color: #ffffff44;
 }
 
+.landing-container .landing .contactDiv .mainContact .sendEmail input::-webkit-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail input:-ms-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail input::-ms-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail input::placeholder {
+  color: #ffffff77;
+}
+
 .landing-container .landing .contactDiv .mainContact .sendEmail textarea {
-  width: 252px;
-  border-top: 0;
-  border-bottom: 0;
-  border-right: 0;
+  width: 247px;
+  border-top: 1px solid #ffffff44;
+  border-bottom: 1px solid #ffffff44;
+  border-right: 1px solid #ffffff44;
   background-color: transparent;
   border-left: 3px solid #ffffff44;
   color: white;
@@ -518,6 +550,22 @@ body {
 
 .landing-container .landing .contactDiv .mainContact .sendEmail textarea:focus {
   background-color: #ffffff44;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail textarea::-webkit-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail textarea:-ms-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail textarea::-ms-input-placeholder {
+  color: #ffffff77;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail textarea::placeholder {
+  color: #ffffff77;
 }
 
 .landing-container .landing .contactDiv .mainContact .sendEmail .sendEmailBtn {

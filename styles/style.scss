@@ -286,6 +286,9 @@ body{
                         font-size: 16px;
                         color: white;
                         padding: 5px;
+                        &::placeholder{
+                            color: #ffffff77;
+                        }
                     }
                     .submitEmail{
                         border: 0;
@@ -341,12 +344,15 @@ body{
                         &:focus{
                             background-color: #ffffff44;
                         }
+                        &::placeholder{
+                            color: #ffffff77;
+                        }
                     }
                     textarea{
-                        width: 252px;
-                        border-top: 0;
-                        border-bottom: 0;
-                        border-right: 0;
+                        width: 247px;
+                        border-top: 1px solid #ffffff44;
+                        border-bottom: 1px solid #ffffff44;
+                        border-right: 1px solid #ffffff44;
                         background-color: transparent;
                         border-left: 3px solid #ffffff44;
                         color: white;
@@ -358,6 +364,9 @@ body{
                         font-family: "Poppins";
                         &:focus{
                             background-color: #ffffff44;
+                        }
+                        &::placeholder{
+                            color: #ffffff77;
                         }
                     }
                     .sendEmailBtn{
