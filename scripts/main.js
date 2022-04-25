@@ -38,7 +38,7 @@ subscribeForm.addEventListener("submit", (e) =>{
         .then((data)=>{
             if(data == "Success"){
                 email.value = "";
-                submitEmail.innerHTML = `<i class="fa fa-badge-check"></i>`;
+                submitEmail.innerHTML = `<i class="fa fa-circle-check"></i>`;
                 setTimeout(()=>{
                     submitEmail.innerHTML = `Subscribe <i class="fa fa-bell">`;
                     setTimeout(()=>{
