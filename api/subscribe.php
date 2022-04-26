@@ -6,6 +6,7 @@
     require_once "../libs/PHPMailer/PHPMailer.php";
     require_once "../libs/PHPMailer/Exception.php";
     require_once "../libs/PHPMailer/SMTP.php";
+    require_once "./ignore.php";
 
     $ContentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : "not set";
 
@@ -39,9 +40,39 @@
         $stmt->bind_param("s", $decoded["Email"]);
 
         if($stmt->execute()){
-            echo json_encode([
-                "Success"
-            ], true);
+            // echo json_encode([
+            //     "Success"
+            // ], true);
+
+            //SMTP SetUp For Sending Emails
+            $mail = new PHPMailer();
+
+            $mail->isSMTP();
+            $mail->Host = "smtp.gmail.com";
+            $mail->Username = "praisetesting24@gmail.com";
+            $mail->Password = $password;
+            $mail->SMTPAuth = true;
+            $mail->Port = 465;
+            $mail->SMTPSecure = "ssl";
+
+            //Sending Email Settings
+            $mail->isHTML(true);
+            $mail->setFrom("praisetesting24@gmail.com", "Pearl .C.");
+            $mail->addAddress("praisetesting24@gmail.com");
+            $mail->Subject = "You've subscribed to Pearl C's Newsletter";
+            $mail->Body = "Thank you " . $decoded["Email"] . " for subscribing to my newsletter.<br/>You'll get all newest updates ranging from my books, to experiences shared, short stories as well as personal favorites!!";
+
+            if($mail->send()){
+                echo json_encode([
+                    "Success"
+                ], true);
+            }
+            else{
+                echo json_encode([
+                    "Message Not Sent"
+                ], true);
+            }
+
             $stmt->close();
             $conn->close();
         }
