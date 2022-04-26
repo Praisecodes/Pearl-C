@@ -6,7 +6,7 @@
     require_once "../libs/PHPMailer/PHPMailer.php";
     require_once "../libs/PHPMailer/Exception.php";
     require_once "../libs/PHPMailer/SMTP.php";
-    require_once "./ignore.php";
+    // require_once "./ignore.php";
 
     $ContentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : "not set";
 
@@ -51,7 +51,7 @@
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
             $mail->Username = "praisetesting24@gmail.com";
-            $mail->Password = $password;
+            $mail->Password = "Praisetesting@042";
             $mail->Port = 465;
             $mail->SMTPSecure = "ssl";
 
