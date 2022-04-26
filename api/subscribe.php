@@ -58,7 +58,7 @@
             //Sending Email Settings
             $mail->isHTML(true);
             $mail->setFrom("praisetesting24@gmail.com", "Pearl .C.");
-            $mail->addAddress("praisetesting24@gmail.com");
+            $mail->addAddress($decoded["Email"]);
             $mail->Subject = "You've subscribed to Pearl C's Newsletter";
             $mail->Body = "Thank you " . $decoded["Email"] . " for subscribing to my newsletter.<br/>You'll get all newest updates ranging from my books, to experiences shared, short stories as well as personal favorites!!";
 
