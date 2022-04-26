@@ -270,6 +270,9 @@ body{
             .welcomeMessage{
                 width: 60vw;
                 padding-left: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 .large{
                     font-size: 80px;
                     color: white;
@@ -483,6 +486,31 @@ body{
     }
 }
 
+@media screen and (max-width: 930px){
+    .landing-container{
+        .landing{
+            .mainContent{
+                flex-direction: column;
+                height: fit-content;
+                align-items: flex-start;
+                .welcomeMessage{
+                    width: 80vw;
+                    height: 70vh;
+                }
+                .introMessage{
+                    width: 35vw;
+                    border-right: 0;
+                    border-left: 5px solid #b33e52;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    height: 75vh;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 780px){
     .landing-container{
         .landing{
@@ -492,6 +520,22 @@ body{
                 }
                 .OpenMobileNav{
                     display: block;
+                }
+            }
+            .mainContent{
+                .welcomeMessage{
+                    .large{
+                        font-size: 60px;
+                    }
+                }
+            }
+            .contactDiv{
+                flex-direction: column;
+                .subscribe{
+                    margin: 20px 0 10px 0;
+                }
+                .mainContact{
+                    margin: 30px 0 10px 0;
                 }
             }
         }
