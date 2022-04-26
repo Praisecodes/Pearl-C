@@ -3,6 +3,11 @@
   src: url("../assets/Poppins-Medium.ttf");
 }
 
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("../assets/Poppins-Light.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -545,7 +550,7 @@ body {
   margin-bottom: 8px;
   -webkit-transition: .2s;
   transition: .2s;
-  font-family: "Poppins";
+  font-family: "Poppins-Light";
 }
 
 .landing-container .landing .contactDiv .mainContact .sendEmail textarea:focus {

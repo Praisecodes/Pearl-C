@@ -62,4 +62,30 @@ subscribeForm.addEventListener("submit", (e) =>{
 
 sendEmail.addEventListener("submit", (e)=>{
     e.preventDefault();
+
+    let messageContent = {
+        "Name": senderName.value,
+        "Email": senderEmail.value,
+        "Body": senderMessage.value
+    };
+
+    if(!(messageContent.Name == "") && !(messageContent.Email == "") && !(messageContent.Body == "")){
+        fetch("./api/sendEmail.php", {
+            method: "POST",
+            headers:{
+                "Content-Type": "application/json"
+            }, 
+            body: JSON.stringify(messageContent)
+        })
+        .then(res=>res.json())
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.log(error);
+        })
+    }
+    else{
+        console.log("Empty Shit Man");
+    }
 })

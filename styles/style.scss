@@ -3,6 +3,11 @@
     src: url("../assets/Poppins-Medium.ttf");
 }
 
+@font-face {
+    font-family: "Poppins-Light";
+    src: url("../assets/Poppins-Light.ttf");
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -361,7 +366,7 @@ body{
                         padding: 5px;
                         margin-bottom: 8px;
                         transition: .2s;
-                        font-family: "Poppins";
+                        font-family: "Poppins-Light";
                         &:focus{
                             background-color: #ffffff22;
                         }
