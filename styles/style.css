@@ -585,6 +585,10 @@ body {
   font-family: "Poppins";
 }
 
+.landing-container .landing .contactDiv .mainContact .sendEmail .sendEmailBtn .fa-circle-check {
+  color: #40e240;
+}
+
 .landing-container .landing .contactDiv .mainContact .socials {
   width: 50%;
   display: -webkit-box;

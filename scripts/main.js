@@ -63,6 +63,9 @@ subscribeForm.addEventListener("submit", (e) =>{
 sendEmail.addEventListener("submit", (e)=>{
     e.preventDefault();
 
+    sendEmailBtn.innerHTML = "Sending...";
+    sendEmailBtn.disabled = true;
+
     let messageContent = {
         "Name": senderName.value,
         "Email": senderEmail.value,
@@ -79,7 +82,13 @@ sendEmail.addEventListener("submit", (e)=>{
         })
         .then(res=>res.json())
         .then((data) => {
-            console.log(data);
+            if(data == "Success"){
+                sendEmailBtn.innerHTML = `Sent <i class="fa fa-circle-check"></i>`;
+                setTimeout(() => {
+                    sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
+                    sendEmailBtn.disabled = false;
+                }, 1000);
+            }
         })
         .catch((error) => {
             console.log(error);
