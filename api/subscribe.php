@@ -40,10 +40,6 @@
         $stmt->bind_param("s", $decoded["Email"]);
 
         if($stmt->execute()){
-            // echo json_encode([
-            //     "Success"
-            // ], true);
-
             //SMTP SetUp For Sending Emails
             $mail = new PHPMailer();
 
@@ -83,10 +79,6 @@
             $stmt->close();
             $conn->close();
         }
-        
-        // echo json_encode([
-        //     $decoded["Email"]
-        // ], true);
     }
     else{
         echo json_encode([
