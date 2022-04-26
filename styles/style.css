@@ -33,6 +33,10 @@
 
 @-webkit-keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
@@ -48,6 +52,10 @@
 
 @keyframes spin {
   0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
   }
@@ -66,6 +74,16 @@
           animation: fadin .9s;
 }
 
+.hideNav {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+
+.showNav {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 body {
   font-size: 16px;
   font-family: "Poppins";
@@ -74,6 +92,82 @@ body {
           animation: fadein .8s;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.mobileNavContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000055;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  display: none;
+}
+
+.mobileNavContainer .mobileNav {
+  width: 80vw;
+  height: 100vh;
+  background-color: white;
+  margin-left: 20vw;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.mobileNavContainer .mobileNav .closeMobileNav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: #c41e7f;
+  color: white;
+  outline: 0;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 50px;
+}
+
+.mobileNavContainer .mobileNav ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 300px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding-left: 10px;
+}
+
+.mobileNavContainer .mobileNav ul li {
+  cursor: pointer;
+}
+
+.mobileNavContainer .mobileNav ul li a {
+  color: #c41e7f;
+  text-decoration: none;
+}
+
+.mobileNavContainer .mobileNav ul li::after {
+  content: "";
+  width: 0;
+  background-color: #c41e7f;
+  display: block;
+  height: 2px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.mobileNavContainer .mobileNav ul li:hover::after {
+  width: 100%;
 }
 
 .landing-container {
@@ -616,5 +710,14 @@ body {
 
 .landing-container .landing .contactDiv .mainContact .socials i:hover {
   color: #c41e7f;
+}
+
+@media screen and (max-width: 780px) {
+  .landing-container .landing .titleDiv ul {
+    display: none;
+  }
+  .landing-container .landing .titleDiv .OpenMobileNav {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

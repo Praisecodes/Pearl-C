@@ -11,6 +11,9 @@ const senderName = document.querySelector(".senderName");
 const senderEmail = document.querySelector(".senderEmail");
 const senderMessage = document.querySelector(".senderMessage");
 const sendEmailBtn = document.querySelector(".sendEmailBtn");
+const mobileNavContainer = document.querySelector(".mobileNavContainer");
+const mobileNav = document.querySelector(".mobileNav");
+const closeMobileNav = document.querySelector(".closeMobileNav");
 
 contact.addEventListener("click", ()=>{
     ContactDiv.scrollIntoView({
@@ -97,4 +100,20 @@ sendEmail.addEventListener("submit", (e)=>{
     else{
         console.log("Empty Shit Man");
     }
-})
+});
+
+OpenMobileNav.addEventListener('click', (e)=>{
+    mobileNavContainer.style.display = "block";
+    setTimeout(() => {
+        mobileNav.classList.add("showNav");
+        mobileNav.classList.remove("hideNav");
+    }, 100);
+});
+
+closeMobileNav.addEventListener('click', (e)=>{
+    mobileNav.classList.add("hideNav");
+    mobileNav.classList.remove("showNav");
+    setTimeout(() => {
+        mobileNavContainer.style.display = "none";
+    }, 500);
+});
