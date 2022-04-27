@@ -47,7 +47,7 @@
             $mail->Host = "smtp.gmail.com";
             $mail->SMTPAuth = true;
             $mail->Username = "praisetesting24@gmail.com";
-            $mail->Password = "Praisetesting@042";
+            $mail->Password = getenv("EMAIL_PASSWORD");
             $mail->Port = 465;
             $mail->SMTPSecure = "ssl";
 
