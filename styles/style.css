@@ -561,12 +561,8 @@ body {
 }
 
 .landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-x {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: red;
-  color: white;
-  font-size: 15px;
+  color: red;
+  font-size: 20px;
 }
 
 .landing-container .landing .contactDiv .mainContact {
