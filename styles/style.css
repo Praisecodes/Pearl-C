@@ -560,6 +560,14 @@ body {
   color: #40e240;
 }
 
+.landing-container .landing .contactDiv .subscribe .subscribeForm .submitEmail .fa-x {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+}
+
 .landing-container .landing .contactDiv .mainContact {
   width: 50%;
   height: -webkit-fit-content;
@@ -691,6 +699,10 @@ body {
 
 .landing-container .landing .contactDiv .mainContact .sendEmail .sendEmailBtn .fa-circle-check {
   color: #40e240;
+}
+
+.landing-container .landing .contactDiv .mainContact .sendEmail .sendEmailBtn .fa-x {
+  color: red;
 }
 
 .landing-container .landing .contactDiv .mainContact .socials {

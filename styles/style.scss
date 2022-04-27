@@ -387,6 +387,13 @@ body{
                         .fa-circle-check{
                             color: #40e240;
                         }
+                        .fa-x{
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 10px;
+                            background-color: red;
+                            color: white;
+                        }
                     }
                 }
             }
@@ -462,6 +469,9 @@ body{
                         font-family: "Poppins";
                         .fa-circle-check{
                             color: #40e240;
+                        }
+                        .fa-x{
+                            color: red;
                         }
                     }
                 }

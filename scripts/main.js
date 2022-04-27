@@ -50,7 +50,14 @@ subscribeForm.addEventListener("submit", (e) =>{
                 }, 2000);
             }
             else{
-                console.log(data);
+                // console.log(data);
+                submitEmail.innerHTML = `<i class="fa fa-x"></i>`;
+                setTimeout(()=>{
+                    submitEmail.innerHTML = `Subscribe <i class="fa fa-bell">`;
+                    setTimeout(()=>{
+                        submitEmail.disabled = false;
+                    }, 100);
+                }, 1000);
             }
             // console.log(data);
         })
@@ -92,13 +99,25 @@ sendEmail.addEventListener("submit", (e)=>{
                     sendEmailBtn.disabled = false;
                 }, 1000);
             }
+            else{
+                sendEmailBtn.innerHTML = `Not Sent <i class="fa fa-x"></i>`;
+                setTimeout(()=>{
+                    sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
+                    sendEmailBtn.disabled = false;
+                }, 1000);
+            }
         })
         .catch((error) => {
             console.log(error);
+            sendEmailBtn.innerHTML = `Not Sent <i class="fa fa-x"></i>`;
+                setTimeout(()=>{
+                    sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
+                    sendEmailBtn.disabled = false;
+                }, 1000);
         })
     }
     else{
-        console.log("Empty Shit Man");
+        console.log("Empty");
     }
 });
 
