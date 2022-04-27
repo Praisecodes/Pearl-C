@@ -7,6 +7,12 @@
     require_once "../libs/PHPMailer/Exception.php";
     require_once "../libs/PHPMailer/PHPMailer.php";
     require_once "../libs/PHPMailer/SMTP.php";
+    require_once "../vendor/autoload.php";
+
+    use Dotenv\Dotenv;
+
+    $dotenv = Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
 
     $emailPassword = getenv("EMAIL_PASSWORD");
 
