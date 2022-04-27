@@ -14,7 +14,7 @@
     // $dotenv = Dotenv::createImmutable(__DIR__);
     // $dotenv->load();
 
-    $emailPassword = base64_encode(parse_url(getenv("EMAIL_PASSWORD")));
+    $emailPassword = parse_url(getenv("EMAIL_PASSWORD"));
 
     $ContentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : "Not Set";
 
@@ -30,7 +30,7 @@
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = "praisetesting24@gmail.com";
-        $mail->Password = $emailPassword;
+        $mail->Password = base64_encode($emailPassword);
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
 
