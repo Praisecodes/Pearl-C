@@ -566,6 +566,7 @@ body {
   border-radius: 10px;
   background-color: red;
   color: white;
+  font-size: 15px;
 }
 
 .landing-container .landing .contactDiv .mainContact {
