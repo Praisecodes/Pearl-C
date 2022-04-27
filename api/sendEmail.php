@@ -14,7 +14,7 @@
     $dotenv = Dotenv::createImmutable(__DIR__);
     $dotenv->load();
 
-    $emailPassword = getenv("EMAIL_PASSWORD");
+    $emailPassword = parse_url(getenv("EMAIL_PASSWORD"));
 
     $ContentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : "Not Set";
 
