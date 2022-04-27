@@ -30,7 +30,7 @@
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
         $mail->Username = "praisetesting24@gmail.com";
-        $mail->Password = '"' . $emailPassword . '"';
+        $mail->Password = $emailPassword;
         $mail->Port = 465;
         $mail->SMTPSecure = "ssl";
 
