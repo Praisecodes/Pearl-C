@@ -62,7 +62,14 @@ subscribeForm.addEventListener("submit", (e) =>{
             // console.log(data);
         })
         .catch((error) => {
-            console.log(error);
+            // console.log(error);
+            submitEmail.innerHTML = `<i class="fa fa-x"></i>`;
+                setTimeout(()=>{
+                    submitEmail.innerHTML = `Subscribe <i class="fa fa-bell">`;
+                    setTimeout(()=>{
+                        submitEmail.disabled = false;
+                    }, 100);
+                }, 1000);
         });
     }
     else{
