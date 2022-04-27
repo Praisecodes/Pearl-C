@@ -773,4 +773,13 @@ body {
     margin: 30px 0 10px 0;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .landing-container .landing .contactDiv .subscribe h3 {
+    font-size: 20px;
+  }
+  .landing-container .landing .contactDiv .subscribe .subscribeForm .email {
+    width: 230px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

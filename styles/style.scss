@@ -541,3 +541,22 @@ body{
         }
     }
 }
+
+@media screen and (max-width: 670px){
+    .landing-container{
+        .landing{
+            .contactDiv{
+                .subscribe{
+                    h3{
+                        font-size: 20px;
+                    }
+                    .subscribeForm{
+                        .email{
+                            width: 230px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
