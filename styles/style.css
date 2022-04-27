@@ -334,7 +334,7 @@ body {
   border: 0;
   color: white;
   background-color: transparent;
-  font-size: 23px;
+  font-size: 30px;
   width: 50px;
   height: 50px;
   margin-right: 1%;
@@ -743,9 +743,8 @@ body {
     width: 35vw;
     border-right: 0;
     border-left: 5px solid #b33e52;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    height: 75vh;
     margin-left: 20px;
   }
 }
@@ -768,9 +767,11 @@ body {
   }
   .landing-container .landing .contactDiv .subscribe {
     margin: 20px 0 10px 0;
+    width: 100%;
   }
   .landing-container .landing .contactDiv .mainContact {
     margin: 30px 0 10px 0;
+    width: 100%;
   }
 }
 
@@ -778,8 +779,34 @@ body {
   .landing-container .landing .contactDiv .subscribe h3 {
     font-size: 20px;
   }
-  .landing-container .landing .contactDiv .subscribe .subscribeForm .email {
-    width: 230px;
+}
+
+@media screen and (max-width: 565px) {
+  .landing-container .landing .mainContent .welcomeMessage {
+    width: 90vw;
+  }
+  .landing-container .landing .mainContent .welcomeMessage .large {
+    font-size: 55px;
+  }
+  .landing-container .landing .mainContent .introMessage {
+    width: 55vw;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .landing-container .landing .mainContent .welcomeMessage {
+    width: 100vw;
+    padding-left: 10px;
+  }
+  .landing-container .landing .mainContent .welcomeMessage .large {
+    font-size: 50px;
+  }
+  .landing-container .landing .mainContent .welcomeMessage .IntroduceSelf {
+    font-size: 16px;
+  }
+  .landing-container .landing .mainContent .introMessage {
+    width: 80vw;
+    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
