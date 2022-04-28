@@ -83,8 +83,8 @@ sendEmail.addEventListener("submit", (e)=>{
     sendEmailBtn.innerHTML = "Sending...";
     sendEmailBtn.disabled = true;
 
-    let Body = senderMessage.value;
-    let mainBody = Body.replace(/(\r\n|\r|\n)g/, "<br/>");
+    let Body = senderMessage.innerHTML;
+    let mainBody = Body.replace(/(\r\n|\n|\r)/g, "<br/>");
 
     let messageContent = {
         "Name": senderName.value,
@@ -128,6 +128,11 @@ sendEmail.addEventListener("submit", (e)=>{
     }
     else{
         console.log("Empty");
+        sendEmailBtn.innerHTML = `Not Sent <i class="fa fa-x"></i>`;
+        setTimeout(()=>{
+            sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
+            sendEmailBtn.disabled = false;
+        }, 1000);
     }
 });
 
