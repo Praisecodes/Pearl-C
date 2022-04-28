@@ -47,7 +47,7 @@ subscribeForm.addEventListener("submit", (e) =>{
                     setTimeout(()=>{
                         submitEmail.disabled = false;
                     }, 100);
-                }, 2000);
+                }, 4000);
             }
             else{
                 // console.log(data);
@@ -57,7 +57,7 @@ subscribeForm.addEventListener("submit", (e) =>{
                     setTimeout(()=>{
                         submitEmail.disabled = false;
                     }, 100);
-                }, 1000);
+                }, 4000);
             }
             // console.log(data);
         })
@@ -74,6 +74,13 @@ subscribeForm.addEventListener("submit", (e) =>{
     }
     else{
         console.log("No No!!");
+        submitEmail.innerHTML = `<i class="fa fa-x"></i>`;
+                setTimeout(()=>{
+                    submitEmail.innerHTML = `Subscribe <i class="fa fa-bell">`;
+                    setTimeout(()=>{
+                        submitEmail.disabled = false;
+                    }, 100);
+                }, 4000);
     }
 });
 
@@ -117,7 +124,7 @@ sendEmail.addEventListener("submit", (e)=>{
                 setTimeout(()=>{
                     sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
                     sendEmailBtn.disabled = false;
-                }, 1000);
+                }, 4000);
             }
         })
         .catch((error) => {
@@ -126,7 +133,7 @@ sendEmail.addEventListener("submit", (e)=>{
                 setTimeout(()=>{
                     sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
                     sendEmailBtn.disabled = false;
-                }, 1000);
+                }, 4000);
         })
     }
     else{
