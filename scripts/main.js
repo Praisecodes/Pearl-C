@@ -83,7 +83,7 @@ sendEmail.addEventListener("submit", (e)=>{
     sendEmailBtn.innerHTML = "Sending...";
     sendEmailBtn.disabled = true;
 
-    let Body = senderMessage.innerHTML;
+    let Body = senderMessage.value;
     let mainBody = Body.split("\n").join("<br/>");
 
     let messageContent = {
@@ -91,6 +91,7 @@ sendEmail.addEventListener("submit", (e)=>{
         "Email": senderEmail.value,
         "Body": mainBody
     };
+    console.log(mainBody);
 
     if(!(messageContent.Name == "") && !(messageContent.Email == "") && !(messageContent.Body == "")){
         fetch("./api/sendEmail.php", {
