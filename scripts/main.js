@@ -84,7 +84,7 @@ sendEmail.addEventListener("submit", (e)=>{
     sendEmailBtn.disabled = true;
 
     let Body = senderMessage.value;
-    let mainBody = Body.split("\r\n").join("<br/>");
+    let mainBody = Body.replace(/(\\n\\r|\\r|\\n)g/, "<br/>");
 
     let messageContent = {
         "Name": senderName.value,
