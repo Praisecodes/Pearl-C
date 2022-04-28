@@ -91,7 +91,6 @@ sendEmail.addEventListener("submit", (e)=>{
         "Email": senderEmail.value,
         "Body": mainBody
     };
-    console.log(mainBody);
 
     if(!(messageContent.Name == "") && !(messageContent.Email == "") && !(messageContent.Body == "")){
         fetch("./api/sendEmail.php", {
@@ -108,7 +107,10 @@ sendEmail.addEventListener("submit", (e)=>{
                 setTimeout(() => {
                     sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
                     sendEmailBtn.disabled = false;
-                }, 1000);
+                }, 4000);
+                senderName.value = "";
+                senderEmail.value = "";
+                senderMessage.value = "";
             }
             else{
                 sendEmailBtn.innerHTML = `Not Sent <i class="fa fa-x"></i>`;
@@ -128,12 +130,11 @@ sendEmail.addEventListener("submit", (e)=>{
         })
     }
     else{
-        console.log("Empty");
         sendEmailBtn.innerHTML = `Not Sent <i class="fa fa-x"></i>`;
         setTimeout(()=>{
             sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
             sendEmailBtn.disabled = false;
-        }, 1000);
+        }, 4000);
     }
 });
 
