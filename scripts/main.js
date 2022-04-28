@@ -86,7 +86,7 @@ sendEmail.addEventListener("submit", (e)=>{
     let messageContent = {
         "Name": senderName.value,
         "Email": senderEmail.value,
-        "Body": senderMessage.value
+        "Body": senderMessage.value.replace(/(\r\n|\n|\r)g/, "<br/>")
     };
 
     if(!(messageContent.Name == "") && !(messageContent.Email == "") && !(messageContent.Body == "")){
