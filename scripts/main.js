@@ -125,6 +125,7 @@ sendEmail.addEventListener("submit", (e)=>{
                     sendEmailBtn.innerHTML = `Send <i class="fa fa-paper-plane">`;
                     sendEmailBtn.disabled = false;
                 }, 4000);
+                console.log(data);
             }
         })
         .catch((error) => {
