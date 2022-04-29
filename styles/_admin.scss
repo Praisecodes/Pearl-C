@@ -18,6 +18,42 @@
         &::-webkit-scrollbar{
             display: none;
         }
+        .profileImage{
+            width: 90%;
+            height: 40vh;
+            .imageDiv{
+                width: 70%;
+                height: 90%;
+                margin-top: 5%;
+                position: relative;
+                border-radius: 50%;
+                border: 1px solid #2b2929;
+                margin-left: 15%;
+                .changeImage{
+                    position: absolute;
+                    top: 78%;
+                    left: 78%;
+                    border: 0;
+                    background-color: #c74290;
+                    color: white;
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    font-size: 20px;
+                    cursor: pointer;
+                    transition: .3s;
+                    i{
+                        transition: .3s;
+                    }
+                    &:hover{
+                        transform: scale(120%);
+                        i{
+                            transform: scale(120%);
+                        }
+                    }
+                }
+            }
+        }
     }
     .workarea{
         width: 70vw;

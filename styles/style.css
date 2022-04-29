@@ -857,6 +857,52 @@ body {
   display: none;
 }
 
+.parentContainer .sideBar .profileImage {
+  width: 90%;
+  height: 40vh;
+}
+
+.parentContainer .sideBar .profileImage .imageDiv {
+  width: 70%;
+  height: 90%;
+  margin-top: 5%;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #2b2929;
+  margin-left: 15%;
+}
+
+.parentContainer .sideBar .profileImage .imageDiv .changeImage {
+  position: absolute;
+  top: 78%;
+  left: 78%;
+  border: 0;
+  background-color: #c74290;
+  color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.parentContainer .sideBar .profileImage .imageDiv .changeImage i {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.parentContainer .sideBar .profileImage .imageDiv .changeImage:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+
+.parentContainer .sideBar .profileImage .imageDiv .changeImage:hover i {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+
 .parentContainer .workarea {
   width: 70vw;
   height: 100vh;
