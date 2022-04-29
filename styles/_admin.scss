@@ -1,3 +1,7 @@
+.showLeft{
+    transform: translate(-200%);
+}
+
 .parentContainer{
     width: 100vw;
     height: 100vh;
@@ -150,6 +154,7 @@
     top: 0;
     left: 0;
     z-index: 3000;
+    display: none;
     .mobileSideBar{
         width: 75vw;
         height: 100vh;
@@ -188,6 +193,51 @@
                     &:hover{
                         transform: scale(120%);
                     }
+                }
+            }
+        }
+        .mobileNameDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2, p{
+                text-align: center;
+            }
+        }
+        .mobileSideBarPosts{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 1px solid #a8a6a696;
+            border-bottom: 1px solid #a8a6a696;
+            .mobileAddPost{
+                border: 0;
+                background-color: #c74290;
+                color: white;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 2px;
+                right: 7px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 960px) {
+    .parentContainer{
+        .sideBar{
+            width: 0;
+        }
+        .workarea{
+            width: 100vw;
+            .workarea-top{
+                .workarea-nav-open{
+                    display: block;
                 }
             }
         }
