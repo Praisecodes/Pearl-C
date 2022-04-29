@@ -818,4 +818,112 @@ body {
     margin-left: 10px;
   }
 }
+
+.parentContainer {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.parentContainer .sideBar {
+  width: 30vw;
+  height: 100vh;
+  background-color: #c41e7f;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parentContainer .sideBar::-webkit-scrollbar {
+  display: none;
+}
+
+.parentContainer .workarea {
+  width: 70vw;
+  height: 100vh;
+  background-color: #dfd7d7;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.parentContainer .workarea::-webkit-scrollbar {
+  display: none;
+}
+
+.parentContainer .workarea .workarea-top {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.parentContainer .workarea .workarea-top .workarea-nav-open {
+  border: 0;
+  background-color: transparent;
+  color: #c41e7f;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  margin-left: 2vw;
+  display: none;
+}
+
+.parentContainer .workarea .workarea-top .blogRedirect {
+  position: absolute;
+  top: auto;
+  right: 30px;
+  border: 0;
+  background-color: transparent;
+  color: #02021a;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.parentContainer .workarea .workarea-top .blogRedirect i {
+  font-size: 30px;
+}
+
+.parentContainer .workarea .workarea-top .blogRedirect:hover {
+  color: #c41e7f;
+}
+
+.parentContainer .workarea .allPosts {
+  width: 95%;
+  border: 1px solid black;
+  margin-left: 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 0;
+}
 /*# sourceMappingURL=style.css.map */
