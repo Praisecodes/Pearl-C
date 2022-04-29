@@ -1022,4 +1022,72 @@ body {
       flex-wrap: wrap;
   padding: 10px 0;
 }
+
+.mobileSideBarContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000055;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+}
+
+.mobileSideBarContainer .mobileSideBar {
+  width: 75vw;
+  height: 100vh;
+  background-color: #c41e7f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileProfileImage {
+  width: 90%;
+  height: 40vh;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv {
+  width: 65%;
+  height: 90%;
+  margin-top: 5%;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #2b2929;
+  margin-left: 15%;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv .mobileChangeImage {
+  position: absolute;
+  top: 78%;
+  left: 78%;
+  border: 0;
+  background-color: #c74290;
+  color: white;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv .mobileChangeImage i {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv .mobileChangeImage:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
 /*# sourceMappingURL=style.css.map */
