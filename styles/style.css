@@ -898,11 +898,6 @@ body {
           transform: scale(120%);
 }
 
-.parentContainer .sideBar .profileImage .imageDiv .changeImage:hover i {
-  -webkit-transform: scale(120%);
-          transform: scale(120%);
-}
-
 .parentContainer .workarea {
   width: 70vw;
   height: 100vh;
