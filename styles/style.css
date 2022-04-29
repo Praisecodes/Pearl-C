@@ -898,10 +898,57 @@ body {
           transform: scale(120%);
 }
 
+.parentContainer .sideBar .nameDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parentContainer .sideBar .nameDiv h2, .parentContainer .sideBar .nameDiv p {
+  text-align: center;
+}
+
+.parentContainer .sideBar .sideBarPosts {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #a8a6a696;
+  border-bottom: 1px solid #a8a6a696;
+}
+
+.parentContainer .sideBar .sideBarPosts .addPost {
+  border: 0;
+  background-color: #c74290;
+  color: white;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 2px;
+  right: 7px;
+  font-size: 18px;
+}
+
 .parentContainer .workarea {
   width: 70vw;
   height: 100vh;
-  background-color: #dfd7d7;
+  background-color: #ebdddd;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -937,15 +984,23 @@ body {
   background-color: transparent;
   color: #02021a;
   height: 40px;
-  width: 40px;
+  width: 70px;
   cursor: pointer;
   font-size: 18px;
   -webkit-transition: .3s;
   transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .parentContainer .workarea .workarea-top .blogRedirect i {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .parentContainer .workarea .workarea-top .blogRedirect:hover {

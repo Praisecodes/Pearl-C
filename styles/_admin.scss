@@ -51,11 +51,40 @@
                 }
             }
         }
+        .nameDiv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2, p{
+                text-align: center;
+            }
+        }
+        .sideBarPosts{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 1px solid #a8a6a696;
+            border-bottom: 1px solid #a8a6a696;
+            .addPost{
+                border: 0;
+                background-color: #c74290;
+                color: white;
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 2px;
+                right: 7px;
+                font-size: 18px;
+            }
+        }
     }
     .workarea{
         width: 70vw;
         height: 100vh;
-        background-color: #dfd7d7;
+        background-color: #ebdddd;
         overflow-x: hidden;
         overflow-y: scroll;
         &::-webkit-scrollbar{
@@ -85,12 +114,15 @@
                 background-color: transparent;
                 color: #02021a;
                 height: 40px;
-                width: 40px;
+                width: 70px;
                 cursor: pointer;
                 font-size: 18px;
                 transition: .3s;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
                 i{
-                    font-size: 30px;
+                    font-size: 24px;
                 }
                 &:hover{
                     color: #c41e7f;
