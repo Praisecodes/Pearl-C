@@ -870,16 +870,23 @@ body {
 .parentContainer .sideBar .profileImage {
   width: 90%;
   height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .parentContainer .sideBar .profileImage .imageDiv {
-  width: 70%;
-  height: 90%;
-  margin-top: 5%;
+  width: 230px;
+  height: 230px;
   position: relative;
   border-radius: 50%;
   border: 1px solid #2b2929;
-  margin-left: 15%;
 }
 
 .parentContainer .sideBar .profileImage .imageDiv .changeImage {

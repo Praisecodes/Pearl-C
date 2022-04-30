@@ -29,14 +29,15 @@
         .profileImage{
             width: 90%;
             height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .imageDiv{
-                width: 70%;
-                height: 90%;
-                margin-top: 5%;
+                width: 230px;
+                height: 230px;
                 position: relative;
                 border-radius: 50%;
                 border: 1px solid #2b2929;
-                margin-left: 15%;
                 .changeImage{
                     position: absolute;
                     top: 78%;
