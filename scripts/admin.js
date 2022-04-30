@@ -14,6 +14,8 @@ const TitleInput = document.querySelector(".TitleInput");
 const categoryInput = document.querySelector(".categoryInput");
 const titleBar = document.querySelector(".titleBar");
 const editBtn = document.querySelector(".edit");
+const heading = document.querySelector(".heading");
+const topCat = document.querySelector(".topCat");
 
 //Variables to store the title and category
 let title = "", category = "";
@@ -62,13 +64,20 @@ const CreatePost = () =>{
     title = TitleInput.value.toUpperCase();
     category = categoryInput.value.toUpperCase();
 
+    heading.innerHTML = title;
+    topCat.innerHTML = `(${category})`;
+    
+    closeNewPost();
+}
+
+const editHeading = () => {
+    addNewPost();
+    TitleInput.value = heading.innerHTML;
+    categoryInput.value = category;
 }
 
 closeNewPostHeader.addEventListener('click', closeNewPost);
 addPost.addEventListener('click', addNewPost);
 mobileAddPost.addEventListener('click', addNewPost);
-editBtn.addEventListener('click', ()=>{
-    TitleInput.value = title;
-    categoryInput.value = category;
-    addNewPost();
-})
+editBtn.addEventListener('click', editHeading);
+CreatePostBtn.addEventListener('click', CreatePost);
