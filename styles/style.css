@@ -824,6 +824,11 @@ body {
           transform: translate(-200%);
 }
 
+.showRight {
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
 .parentContainer {
   width: 100vw;
   height: 100vh;
@@ -1061,21 +1066,31 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 4000;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage {
   width: 90%;
   height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv {
-  width: 65%;
-  height: 90%;
-  margin-top: 5%;
+  width: 200px;
+  height: 200px;
   position: relative;
   border-radius: 50%;
   border: 1px solid #2b2929;
-  margin-left: 15%;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv .mobileChangeImage {

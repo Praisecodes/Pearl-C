@@ -2,6 +2,10 @@
     transform: translate(-200%);
 }
 
+.showRight{
+    transform: translate(0%);
+}
+
 .parentContainer{
     width: 100vw;
     height: 100vh;
@@ -166,17 +170,20 @@
         flex-direction: column;
         align-items: center;
         color: white;
+        transition: .5s;
+        z-index: 4000;
         .mobileProfileImage{
             width: 90%;
             height: 40vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             .mobileImageDiv{
-                width: 65%;
-                height: 90%;
-                margin-top: 5%;
+                width: 200px;
+                height: 200px;
                 position: relative;
                 border-radius: 50%;
                 border: 1px solid #2b2929;
-                margin-left: 15%;
                 .mobileChangeImage{
                     position: absolute;
                     top: 78%;
