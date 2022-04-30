@@ -88,7 +88,7 @@
     .workarea{
         width: 70vw;
         height: 100vh;
-        background-color: #ebdddd;
+        background-color: white;
         overflow-x: hidden;
         overflow-y: scroll;
         &::-webkit-scrollbar{
@@ -100,15 +100,18 @@
             position: relative;
             overflow: hidden;
             background-color: transparent;
+            display: flex;
+            align-items: center;
             .workarea-nav-open{
                 border: 0;
                 background-color: transparent;
                 color: #c41e7f;
                 width: 40px;
                 height: 40px;
-                font-size: 20px;
+                font-size: 30px;
                 margin-left: 2vw;
                 display: none;
+                cursor: pointer;
             }
             .blogRedirect{
                 position: absolute;
