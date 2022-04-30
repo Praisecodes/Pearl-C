@@ -879,7 +879,7 @@ body {
 
 .parentContainer .sideBar .profileImage {
   width: 90%;
-  height: 40vh;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1212,7 +1212,7 @@ body {
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage {
   width: 90%;
-  height: 40vh;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
