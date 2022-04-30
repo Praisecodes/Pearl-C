@@ -158,6 +158,44 @@
             flex-direction: row;
             flex-wrap: wrap;
             padding: 10px 0;
+            display: none;
+        }
+        .NewPostForms{
+            width: 95%;
+            height: calc(100vh - 70px);
+            margin-left: 2.5%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            .titleBar{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                justify-content: center;
+                h1{
+                    font-size: 50px;
+                    text-align: center;
+                }
+                .edit{
+                    position: absolute;
+                    top: 10px;
+                    right: 30px;
+                    border: 0;
+                    background-color: #c74290;
+                    color: white;
+                    border-radius: 50%;
+                    height: 30px;
+                    width: 30px;
+                    opacity: 0.5;
+                    cursor: pointer;
+                    transition: .3s;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }
@@ -260,6 +298,11 @@
         color: white;
         transition: .5s;
         z-index: 4000;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
         .mobileProfileImage{
             width: 90%;
             height: 300px;
@@ -336,6 +379,13 @@
             .workarea-top{
                 .workarea-nav-open{
                     display: block;
+                }
+            }
+            .NewPostForms{
+                .titleBar{
+                    h1{
+                        font-size: 40px;
+                    }
                 }
             }
         }

@@ -1055,6 +1055,64 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 10px 0;
+  display: none;
+}
+
+.parentContainer .workarea .NewPostForms {
+  width: 95%;
+  height: calc(100vh - 70px);
+  margin-left: 2.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+}
+
+.parentContainer .workarea .NewPostForms .titleBar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.parentContainer .workarea .NewPostForms .titleBar h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.parentContainer .workarea .NewPostForms .titleBar .edit {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  border: 0;
+  background-color: #c74290;
+  color: white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  opacity: 0.5;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.parentContainer .workarea .NewPostForms .titleBar .edit:hover {
+  opacity: 1;
 }
 
 .NewPostHeaderContainer {
@@ -1208,6 +1266,12 @@ body {
   -webkit-transition: .5s;
   transition: .5s;
   z-index: 4000;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.mobileSideBarContainer .mobileSideBar::-webkit-scrollbar {
+  display: none;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage {
@@ -1314,6 +1378,9 @@ body {
   }
   .parentContainer .workarea .workarea-top .workarea-nav-open {
     display: block;
+  }
+  .parentContainer .workarea .NewPostForms .titleBar h1 {
+    font-size: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
