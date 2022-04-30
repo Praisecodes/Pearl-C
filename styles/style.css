@@ -845,7 +845,7 @@ body {
 }
 
 .parentContainer .sideBar {
-  width: 30vw;
+  width: 28vw;
   height: 100vh;
   background-color: #c41e7f;
   color: white;
@@ -963,7 +963,7 @@ body {
 }
 
 .parentContainer .workarea {
-  width: 70vw;
+  width: 72vw;
   height: 100vh;
   background-color: white;
   overflow-x: hidden;
@@ -1045,6 +1045,65 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 10px 0;
+}
+
+.NewPostHeaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000022;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NewPostHeaderContainer .NewPostHeader {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 1px #1615153d;
+          box-shadow: 0 0 5px 1px #1615153d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.NewPostHeaderContainer .NewPostHeader h2 {
+  margin-top: 10px;
+}
+
+.NewPostHeaderContainer .NewPostHeader .closeNewPostHeader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c41e7f;
+  color: white;
+  font-size: 17px;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  text-align: center;
+  border-top-right-radius: 5px;
+  outline: 0;
 }
 
 .mobileSideBarContainer {

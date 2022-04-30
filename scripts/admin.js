@@ -2,6 +2,8 @@ const blogRedirect = document.querySelector(".blogRedirect");
 const OpenMobileSideBar = document.querySelector(".workarea-nav-open");
 const mobileSideBarContainer = document.querySelector(".mobileSideBarContainer");
 const mobileSideBar = document.querySelector(".mobileSideBar");
+const allPosts = document.querySelector(".allPosts");
+const NewPostForms = document.querySelector(".NewPostForms");
 
 blogRedirect.addEventListener("click", (e)=>{
     window.location = "../";
@@ -21,4 +23,9 @@ mobileSideBarContainer.addEventListener('click', (e)=>{
     setTimeout(() => {
         mobileSideBarContainer.style.display = "none";
     }, 500);
-})
+});
+
+const addNewPost = () => {
+    allPosts.style.display = "none";
+    NewPostForms.style.display = "flex";
+}
