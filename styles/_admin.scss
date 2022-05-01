@@ -173,7 +173,8 @@
                 align-items: center;
                 width: 100%;
                 justify-content: center;
-                border: 1px solid #00000055;
+                // border: 1px solid #00000055;
+                border-bottom: 1px solid #00000055;
                 h1{
                     font-size: 50px;
                     text-align: center;
@@ -199,7 +200,9 @@
             .editorDiv{
                 width: 100%;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 flex-wrap: wrap;
                 textarea{
                     width: 700px;
@@ -211,6 +214,47 @@
                     height: 445px;
                     font-family: "Poppins";
                     margin-left: 3px;
+                }
+                .tips{
+                    // width: 200px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #c41e7f;
+                    background-color: transparent;
+                    border: 0;
+                    outline: 0;
+                    font-size: 15px;
+                    cursor: pointer;
+                    opacity: 0.5;
+                    margin-top: 4px;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+                .buttons{
+                    width: 300px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-bottom: 5px;
+                    .post, .delete{
+                        width: 100px;
+                        height: 40px;
+                        color: white;
+                        border: 0;
+                        outline: 0;
+                        cursor: pointer;
+                        font-size: 17px;
+                    }
+                    .post{
+                        background-color: #45d145;
+                    }
+                    .delete{
+                        background-color: #ee2828;
+                    }
+                    
                 }
             }
         }

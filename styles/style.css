@@ -1086,7 +1086,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #00000055;
+  border-bottom: 1px solid #00000055;
 }
 
 .parentContainer .workarea .NewPostForms .titleBar h1 {
@@ -1119,10 +1119,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1136,6 +1142,66 @@ body {
   height: 445px;
   font-family: "Poppins";
   margin-left: 3px;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv .tips {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #c41e7f;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.5;
+  margin-top: 4px;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv .tips:hover {
+  opacity: 1;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv .buttons {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv .buttons .post, .parentContainer .workarea .NewPostForms .editorDiv .buttons .delete {
+  width: 100px;
+  height: 40px;
+  color: white;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv .buttons .post {
+  background-color: #45d145;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv .buttons .delete {
+  background-color: #ee2828;
 }
 
 .NewPostHeaderContainer {
