@@ -140,4 +140,6 @@ storyName.addEventListener('keyup', (e)=>{
         deletePostBtn.style.opacity = "1";
         deletePostBtn.disabled = false;
     }
-})
+});
+
+// Create Post Function
