@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("../assets/Roboto-Light.ttf");
+}
+
+
 .showLeft{
     transform: translate(-200%);
 }
@@ -247,6 +253,7 @@
                         outline: 0;
                         cursor: pointer;
                         font-size: 17px;
+                        font-family: "Roboto-Light";
                     }
                     .post{
                         background-color: #45d145;

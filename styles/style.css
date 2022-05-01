@@ -819,6 +819,11 @@ body {
   }
 }
 
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../assets/Roboto-Light.ttf");
+}
+
 .showLeft {
   -webkit-transform: translate(-200%);
           transform: translate(-200%);
@@ -1194,6 +1199,7 @@ body {
   outline: 0;
   cursor: pointer;
   font-size: 17px;
+  font-family: "Roboto-Light";
 }
 
 .parentContainer .workarea .NewPostForms .editorDiv .buttons .post {
