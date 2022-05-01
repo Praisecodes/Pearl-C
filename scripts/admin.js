@@ -16,6 +16,14 @@ const titleBar = document.querySelector(".titleBar");
 const editBtn = document.querySelector(".edit");
 const heading = document.querySelector(".heading");
 const topCat = document.querySelector(".topCat");
+const storyName = document.querySelector(".storyName");
+const closeDeletePostBtn = document.querySelector(".closeDeletePost");
+const deletePostBtn  = document.querySelector(".deletePost");
+const write = document.querySelector(".write");
+const cat = document.querySelector(".cat");
+const deletePostDiv = document.querySelector(".deletePostDiv");
+const deletePostContainer = document.querySelector(".deletePostContainer");
+const deleteBtn = document.querySelector(".delete");
 
 //Variables to store the title and category
 let title = "", category = "";
@@ -52,6 +60,17 @@ const closeNewPost = () =>{
     }, 100);
 }
 
+const closeDeletePost = () => {
+    if(!(storyName.value == "")){
+        storyName.value = "";
+    }
+    deletePostDiv.classList.add("shrink");
+    deletePostDiv.classList.remove("fullscale");
+    setTimeout(()=>{
+        deletePostContainer.style.display = "none";
+    }, 100);
+}
+
 const addNewPost = () => {
     NewPostHeaderContainer.style.display = "flex";
     CreatePostBtn.innerHTML = "Create Post";
@@ -76,6 +95,24 @@ const CreatePost = () =>{
     }
 }
 
+const openDeletModal = () => {
+    write.innerHTML = `Delete "${title}"`;
+    cat.innerHTML = `Category: ${category}`;
+    deletePostBtn.innerHTML = `Delete ${category}`;
+
+    deletePostContainer.style.display = "flex";
+    setTimeout(() => {
+        deletePostDiv.classList.add("fullscale");
+        deletePostDiv.classList.remove("shrink");
+    }, 0);
+    deletePostBtn.style.opacity = "0.8";
+    deletePostBtn.disabled = true;
+}
+
+const DeletePost = () =>{
+    title = heading.innerHTML;
+}
+
 const editHeading = () => {
     addNewPost();
     CreatePostBtn.innerHTML = "Update Title";
@@ -88,3 +125,16 @@ addPost.addEventListener('click', addNewPost);
 mobileAddPost.addEventListener('click', addNewPost);
 editBtn.addEventListener('click', editHeading);
 CreatePostBtn.addEventListener('click', CreatePost);
+closeDeletePostBtn.addEventListener('click', closeDeletePost);
+deleteBtn.addEventListener('click', openDeletModal);
+
+storyName.addEventListener('keyup', (e)=>{
+    if(!(storyName.value == title)){
+        deletePostBtn.style.opacity = "0.8";
+        deletePostBtn.disabled = true;
+    }
+    else{
+        deletePostBtn.style.opacity = "1";
+        deletePostBtn.disabled = false;
+    }
+})

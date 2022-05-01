@@ -347,6 +347,74 @@
     }
 }
 
+.deletePostContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000022;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    display: none;
+    .deletePostDiv{
+        width: 400px;
+        // height: 250px;
+        position: relative;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #1615153d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s;
+        .closeDeletePost{
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #c41e7f;
+            color: white;
+            font-size: 17px;
+            border: 0;
+            height: 40px;
+            width: 40px;
+            cursor: pointer;
+            text-align: center;
+            border-top-right-radius: 5px;
+            outline: 0;
+        }
+        .storyName{
+            outline: 0;
+            border: 1px solid #999797;
+            width: 90%;
+            height: 35px;
+            font-family: "Poppins";
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 3px;
+            color: #2b2929;
+            &::placeholder{
+                color: #3f3838af;
+            }
+        }
+        .deletePost{
+            width: 120px;
+            height: 40px;
+            color: white;
+            background-color: #dd2c2c;
+            border: 0;
+            cursor: pointer;
+            font-size: 17px;
+            font-family: "Poppins-Light";
+            overflow: hidden;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
 .mobileSideBarContainer{
     width: 100vw;
     height: 100vh;
