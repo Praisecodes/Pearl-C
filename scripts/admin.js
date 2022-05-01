@@ -54,7 +54,7 @@ const closeNewPost = () =>{
 
 const addNewPost = () => {
     NewPostHeaderContainer.style.display = "flex";
-    CreatePostBtn.innerHTML = "Create Post"
+    CreatePostBtn.innerHTML = "Create Post";
     setTimeout(() => {
         NewPostHeader.classList.add("fullscale");
         NewPostHeader.classList.remove("shrink");

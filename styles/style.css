@@ -1059,7 +1059,6 @@ body {
 
 .parentContainer .workarea .NewPostForms {
   width: 95%;
-  height: calc(100vh - 70px);
   margin-left: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1068,12 +1067,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  display: none;
-}
-
-.parentContainer .workarea .NewPostForms::-webkit-scrollbar {
   display: none;
 }
 
@@ -1093,7 +1086,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
   border: 1px solid #00000055;
 }
 

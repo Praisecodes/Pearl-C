@@ -161,17 +161,11 @@
         }
         .NewPostForms{
             width: 95%;
-            height: calc(100vh - 70px);
             margin-left: 2.5%;
             display: flex;
             flex-direction: column;
             // border: 1px solid #2b2929;
-            overflow-x: hidden;
-            overflow-y: scroll;
             display: none;
-            &::-webkit-scrollbar{
-                display: none;
-            }
             .titleBar{
                 position: relative;
                 display: flex;
@@ -179,7 +173,6 @@
                 align-items: center;
                 width: 100%;
                 justify-content: center;
-                overflow: hidden;
                 border: 1px solid #00000055;
                 h1{
                     font-size: 50px;
