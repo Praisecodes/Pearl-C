@@ -1134,7 +1134,7 @@ body {
 }
 
 .parentContainer .workarea .NewPostForms .editorDiv textarea {
-  width: 700px;
+  width: 80%;
   border: 0;
   padding: 10px;
   outline: 0;
