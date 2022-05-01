@@ -54,6 +54,7 @@ const closeNewPost = () =>{
 
 const addNewPost = () => {
     NewPostHeaderContainer.style.display = "flex";
+    CreatePostBtn.innerHTML = "Create Post"
     setTimeout(() => {
         NewPostHeader.classList.add("fullscale");
         NewPostHeader.classList.remove("shrink");
@@ -64,14 +65,20 @@ const CreatePost = () =>{
     title = TitleInput.value.toUpperCase();
     category = categoryInput.value.toUpperCase();
 
-    heading.innerHTML = title;
-    topCat.innerHTML = `(${category})`;
+    if(!((title == "" && category == "") || title == "" || category == "")){
+        NewPostForms.style.display = "flex";
+        allPosts.style.display = "none";
+        
+        heading.innerHTML = title;
+        topCat.innerHTML = `(${category})`;
     
-    closeNewPost();
+        closeNewPost();
+    }
 }
 
 const editHeading = () => {
     addNewPost();
+    CreatePostBtn.innerHTML = "Update Title";
     TitleInput.value = heading.innerHTML;
     categoryInput.value = category;
 }

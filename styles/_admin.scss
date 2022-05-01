@@ -101,7 +101,7 @@
     .workarea{
         width: 72vw;
         height: 100vh;
-        background-color: white;
+        background-color: #f1ebeb;
         overflow-x: hidden;
         overflow-y: scroll;
         &::-webkit-scrollbar{
@@ -158,7 +158,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             padding: 10px 0;
-            display: none;
         }
         .NewPostForms{
             width: 95%;
@@ -166,7 +165,13 @@
             margin-left: 2.5%;
             display: flex;
             flex-direction: column;
-            border: 1px solid black;
+            // border: 1px solid #2b2929;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            display: none;
+            &::-webkit-scrollbar{
+                display: none;
+            }
             .titleBar{
                 position: relative;
                 display: flex;
@@ -174,6 +179,8 @@
                 align-items: center;
                 width: 100%;
                 justify-content: center;
+                overflow: hidden;
+                border: 1px solid #00000055;
                 h1{
                     font-size: 50px;
                     text-align: center;
@@ -194,6 +201,23 @@
                     &:hover{
                         opacity: 1;
                     }
+                }
+            }
+            .editorDiv{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                textarea{
+                    width: 700px;
+                    // border: 1px solid #2b2929;
+                    border: 0;
+                    padding: 10px;
+                    outline: 0;
+                    border-radius: 3px;
+                    height: 445px;
+                    font-family: "Poppins";
+                    margin-left: 3px;
                 }
             }
         }

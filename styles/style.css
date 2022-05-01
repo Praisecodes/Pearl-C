@@ -975,7 +975,7 @@ body {
 .parentContainer .workarea {
   width: 72vw;
   height: 100vh;
-  background-color: white;
+  background-color: #f1ebeb;
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -1055,7 +1055,6 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 10px 0;
-  display: none;
 }
 
 .parentContainer .workarea .NewPostForms {
@@ -1069,7 +1068,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: none;
+}
+
+.parentContainer .workarea .NewPostForms::-webkit-scrollbar {
+  display: none;
 }
 
 .parentContainer .workarea .NewPostForms .titleBar {
@@ -1088,6 +1093,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
+  border: 1px solid #00000055;
 }
 
 .parentContainer .workarea .NewPostForms .titleBar h1 {
@@ -1113,6 +1120,30 @@ body {
 
 .parentContainer .workarea .NewPostForms .titleBar .edit:hover {
   opacity: 1;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.parentContainer .workarea .NewPostForms .editorDiv textarea {
+  width: 700px;
+  border: 0;
+  padding: 10px;
+  outline: 0;
+  border-radius: 3px;
+  height: 445px;
+  font-family: "Poppins";
+  margin-left: 3px;
 }
 
 .NewPostHeaderContainer {
