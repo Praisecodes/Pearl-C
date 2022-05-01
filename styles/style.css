@@ -1477,5 +1477,8 @@ body {
   .parentContainer .workarea .NewPostForms .titleBar h1 {
     font-size: 40px;
   }
+  .parentContainer .workarea .NewPostForms .editorDiv textarea {
+    width: 90%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
