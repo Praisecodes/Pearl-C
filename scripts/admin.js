@@ -110,7 +110,9 @@ const openDeletModal = () => {
 }
 
 const DeletePost = () =>{
-    title = heading.innerHTML;
+    NewPostForms.style.display = "none";
+    allPosts.style.display = "flex";
+    closeDeletePost();
 }
 
 const editHeading = () => {
@@ -127,6 +129,7 @@ editBtn.addEventListener('click', editHeading);
 CreatePostBtn.addEventListener('click', CreatePost);
 closeDeletePostBtn.addEventListener('click', closeDeletePost);
 deleteBtn.addEventListener('click', openDeletModal);
+deletePostBtn.addEventListener('click', DeletePost);
 
 storyName.addEventListener('keyup', (e)=>{
     if(!(storyName.value == title)){
