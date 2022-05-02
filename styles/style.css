@@ -1144,7 +1144,7 @@ body {
   padding: 10px;
   outline: 0;
   border-radius: 3px;
-  height: 445px;
+  height: 70vh;
   font-family: "Poppins";
   margin-left: 3px;
 }
@@ -1232,7 +1232,6 @@ body {
 
 .NewPostHeaderContainer .NewPostHeader {
   width: 400px;
-  height: 250px;
   position: relative;
   background-color: white;
   border-radius: 5px;
@@ -1254,6 +1253,7 @@ body {
 
 .NewPostHeaderContainer .NewPostHeader h2 {
   margin-top: 10px;
+  text-align: center;
 }
 
 .NewPostHeaderContainer .NewPostHeader .closeNewPostHeader {
@@ -1330,6 +1330,7 @@ body {
   font-family: "Poppins-Light";
   overflow: hidden;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .deletePostContainer {
@@ -1371,6 +1372,10 @@ body {
           align-items: center;
   -webkit-transition: .3s;
   transition: .3s;
+}
+
+.deletePostContainer .deletePostDiv h3 {
+  text-align: center;
 }
 
 .deletePostContainer .deletePostDiv .closeDeletePost {
@@ -1578,6 +1583,15 @@ body {
   }
   .parentContainer .workarea .NewPostForms .editorDiv textarea {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .deletePostContainer .deletePostDiv {
+    width: 95vw;
+  }
+  .NewPostHeaderContainer .NewPostHeader {
+    width: 95vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

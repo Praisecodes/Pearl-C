@@ -217,7 +217,7 @@
                     padding: 10px;
                     outline: 0;
                     border-radius: 3px;
-                    height: 445px;
+                    height: 70vh;
                     font-family: "Poppins";
                     margin-left: 3px;
                 }
@@ -282,7 +282,7 @@
     display: none;
     .NewPostHeader{
         width: 400px;
-        height: 250px;
+        // height: 250px;
         position: relative;
         background-color: white;
         border-radius: 5px;
@@ -293,6 +293,7 @@
         transition: .3s;
         h2{
             margin-top: 10px;
+            text-align: center;
         }
         .closeNewPostHeader{
             position: absolute;
@@ -343,6 +344,7 @@
             font-family: "Poppins-Light";
             overflow: hidden;
             margin-top: 10px;
+            margin-bottom: 10px;
         }
     }
 }
@@ -370,6 +372,9 @@
         flex-direction: column;
         align-items: center;
         transition: .3s;
+        h3{
+            text-align: center;
+        }
         .closeDeletePost{
             position: absolute;
             top: 0;
@@ -529,6 +534,19 @@
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 430px){
+    .deletePostContainer{
+        .deletePostDiv{
+            width: 95vw;
+        }
+    }
+    .NewPostHeaderContainer{
+        .NewPostHeader{
+            width: 95vw;
         }
     }
 }
