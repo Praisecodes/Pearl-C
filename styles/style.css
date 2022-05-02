@@ -1594,4 +1594,16 @@ body {
     width: 95vw;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .mobileSideBarContainer .mobileSideBar h1 {
+    font-size: 30px;
+  }
+  .mobileSideBarContainer .mobileSideBar .mobileNameDiv h2 {
+    font-size: 20px;
+  }
+  .mobileSideBarContainer .mobileSideBar .mobileSideBarPosts h2 {
+    font-size: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
