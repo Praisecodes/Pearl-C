@@ -1436,6 +1436,123 @@ body {
   margin-bottom: 5px;
 }
 
+.changeProfilePicContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000022;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5000;
+  display: none;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv {
+  width: 400px;
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 1px #1615153d;
+          box-shadow: 0 0 5px 1px #1615153d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv .closeChangeProfilePic {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #c41e7f;
+  color: white;
+  font-size: 17px;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  text-align: center;
+  border-top-right-radius: 5px;
+  outline: 0;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv h3 {
+  text-align: center;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv .profilePicPreview {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px 0;
+  color: #777;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv .selectProfileImage .File {
+  display: none;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv .selectProfileImage .ChooseImageBtn {
+  background-color: #c41e7f;
+  color: white;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv .update {
+  background-color: #8dcc2d;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  outline: 0;
+  font-family: "Poppins";
+  font-size: 100%;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
 .mobileSideBarContainer {
   width: 100vw;
   height: 100vh;
@@ -1591,6 +1708,9 @@ body {
     width: 95vw;
   }
   .NewPostHeaderContainer .NewPostHeader {
+    width: 95vw;
+  }
+  .changeProfilePicContainer .changeProfilePicDiv {
     width: 95vw;
   }
 }

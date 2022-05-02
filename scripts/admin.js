@@ -142,4 +142,37 @@ storyName.addEventListener('keyup', (e)=>{
     }
 });
 
-// Create Post Function
+// Create Post Functions
+
+
+
+
+
+// Change Profile Picture Functions
+const changeProfilePicContainer = document.querySelector(".changeProfilePicContainer");
+const changeProfilePicDiv = document.querySelector(".changeProfilePicDiv");
+const closeChangeProfilePicBtn = document.querySelector(".closeChangeProfilePic");
+const changeImage = document.querySelector(".changeImage");
+const mobileChangeImage = document.querySelector(".mobileChangeImage");
+
+const closeChangeProfilePic = () =>{
+    changeProfilePicDiv.classList.add("shrink");
+    changeProfilePicDiv.classList.remove("fullscale");
+
+    setTimeout(() => {
+        changeProfilePicContainer.style.display = "none";
+    }, 100);
+}
+
+const openChangeProfilePic = () => {
+    changeProfilePicContainer.style.display = "flex";
+
+    setTimeout(() => {
+        changeProfilePicDiv.classList.add("fullscale");
+        changeProfilePicDiv.classList.remove("shrink");
+    }, 0);
+}
+
+closeChangeProfilePicBtn.addEventListener('click', closeChangeProfilePic);
+changeImage.addEventListener('click', openChangeProfilePic);
+mobileChangeImage.addEventListener('click', openChangeProfilePic);
