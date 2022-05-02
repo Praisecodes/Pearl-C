@@ -1539,6 +1539,10 @@ body {
   margin: 5px;
 }
 
+.changeProfilePicContainer .changeProfilePicDiv .selectProfileImage .ChooseImageBtn i {
+  margin-right: 3px;
+}
+
 .changeProfilePicContainer .changeProfilePicDiv .update {
   background-color: #8dcc2d;
   color: white;
