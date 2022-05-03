@@ -28,7 +28,7 @@
                     }
                 }
                 else{
-                    echo $fileError
+                    echo $fileError;
                 }
             }
             else{
