@@ -917,6 +917,10 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .parentContainer .sideBar .profileImage .imageDiv .changeImage {
@@ -1671,6 +1675,10 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv .mobileChangeImage {
