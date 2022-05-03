@@ -1,45 +1,40 @@
 <?php
+
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if(isset($_POST["update"])){
+        if(isset($_POST["Image"]) && isset($_POST["update"])){
             $file = $_FILES["Image"];
 
-            $fileName = $file['name'];
-            $fileTmpName = $file['tmp_name'];
-            $fileSize = $file['size'];
-            $fileError = $file['error'];
-            $fileType = $file['type'];
+            $fileTmpName = $file["tmp_name"];
+            $fileName = $file["name"];
+            $fileType = $file["type"];
+            $fileSize = $file["size"];
+            $fileError = $file["error"];
 
             $fileExt = explode(".", $fileName);
             $fileExtension = strtolower(end($fileExt));
 
-            $allowed = array('jpg');
-
-            if(in_array($fileExtension, $allowed)){
+            if($fileExtension == "jpg"){
                 if($fileError === 0){
-                    if($fileSize >= 500000){
-                        $fileNewName = "profileImage." . $fileExtension;
-
+                    if($fileSize <= 2048){
+                        $fileNewName = "profileImage" . "." . $fileExtension;
+                        
                         $fileDestination = "user/" . $fileNewName;
                         move_uploaded_file($fileTmpName, $fileDestination);
-                        header("Location: ./");
                     }
                     else{
-                        header("Location: ./");
+                        echo "Please Choose A file of 2mb maximum size";
                     }
                 }
                 else{
-                    echo $fileError;
+                    echo "Error: " . $fileError;
                 }
             }
             else{
-                echo "Only .jpg Allowed";
+                echo "Please choose a .jpg file";
             }
         }
         else{
-            echo "Not Set";
+            echo "No Image Chosen";
         }
-    }
-    else{
-        header("Location: ./");
     }
 ?>
