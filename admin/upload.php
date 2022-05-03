@@ -24,22 +24,22 @@
                         header("Location: ./");
                     }
                     else{
-                        header("Location: ./" + "?TooBig");
+                        header("Location: ./");
                     }
                 }
                 else{
-                    header("Location: ./" + "?ErrorMessage");
+                    echo $fileError
                 }
             }
             else{
-                header("Location: ./" + "?wrongUpload");
+                echo "Only .jpg Allowed";
             }
         }
         else{
-            header("Location: ./" + "?errorNotPost");
+            header("Location: ./");
         }
     }
     else{
-        header("Location: ./" + "?error");
+        header("Location: ./");
     }
 ?>
