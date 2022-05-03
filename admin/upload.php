@@ -36,7 +36,7 @@
             }
         }
         else{
-            header("Location: ./");
+            echo "Not Set";
         }
     }
     else{
