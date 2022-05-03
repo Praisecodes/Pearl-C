@@ -16,7 +16,7 @@
 
             if(in_array($fileExtension, $allowed)){
                 if($fileError === 0){
-                    if($fileSize <= 500000){
+                    if($fileSize >= 500000){
                         $fileNewName = "profileImage." . $fileExtension;
 
                         $fileDestination = "user/" . $fileNewName;
