@@ -27,6 +27,10 @@
                         header("Location: ./");
                     }
                 }
+                elseif($fileError === 4){
+                    echo "No file Choseen";
+                    header("Location: ./");
+                }
                 else{
                     echo $fileError;
                 }
