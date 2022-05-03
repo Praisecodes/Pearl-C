@@ -21,6 +21,7 @@
             <br/>
             <div class="mobileProfileImage">
                 <div class="mobileImageDiv">
+                    <img src="./user/profileImage.jpg" alt="">
                     <button class="mobileChangeImage" title="Add New Picture">
                         <i class="fa fa-camera"></i>
                     </button>
@@ -79,13 +80,14 @@
             </button><br/><br/>
             <h3>UPDATE PROFILE PICTURE</h3>
             <div class="profilePicPreview">
-                <h4>No Image Selected</h4>
+                <img src="" alt="No Image Selected" class="ImageToPreview">
+                <h4 class="defaultText">No Image Selected</h4>
             </div>
-            <form class="selectProfileImage">
+            <form class="selectProfileImage" method="post">
                 <input type="file" name="Image" id="File" class="File" accept="image/*">
                 <label for="File" class="ChooseImageBtn"><i class="fa fa-image"></i> CHOOSE IMAGE</label>
+                <button type="submit" class="update"><i class="fa fa-upload"></i> UPDATE</button>
             </form>
-            <button class="update"><i class="fa fa-upload"></i> UPDATE</button>
         </div>
     </div>
     <!--Change Profile Picture Div End-->
@@ -96,6 +98,7 @@
             <br/>
             <div class="profileImage">
                 <div class="imageDiv">
+                    <img src="./user/profileImage.jpg" alt="">
                     <button class="changeImage" title="Add New Picture">
                         <i class="fa fa-camera"></i>
                     </button>

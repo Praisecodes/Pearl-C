@@ -154,10 +154,19 @@ const changeProfilePicDiv = document.querySelector(".changeProfilePicDiv");
 const closeChangeProfilePicBtn = document.querySelector(".closeChangeProfilePic");
 const changeImage = document.querySelector(".changeImage");
 const mobileChangeImage = document.querySelector(".mobileChangeImage");
+const ImageToPreview = document.querySelector(".ImageToPreview");
+const selectProfileImage = document.querySelector(".selectProfileImage");
+const inpFile = document.getElementById("File");
+const defaultText= document.querySelector(".defaultText");
 
 const closeChangeProfilePic = () =>{
     changeProfilePicDiv.classList.add("shrink");
     changeProfilePicDiv.classList.remove("fullscale");
+    if(defaultText.style.display !== null && ImageToPreview.style.display !== null){
+        defaultText.style.display = null;
+        ImageToPreview.style.display = null;
+        ImageToPreview.setAttribute("src", "");
+    }
 
     setTimeout(() => {
         changeProfilePicContainer.style.display = "none";
@@ -176,3 +185,25 @@ const openChangeProfilePic = () => {
 closeChangeProfilePicBtn.addEventListener('click', closeChangeProfilePic);
 changeImage.addEventListener('click', openChangeProfilePic);
 mobileChangeImage.addEventListener('click', openChangeProfilePic);
+
+inpFile.addEventListener("change", function(){
+    const file = this.files[0];
+
+    if(file){
+        const reader = new FileReader();
+
+        defaultText.style.display = "none";
+        ImageToPreview.style.display = "block";
+
+        reader.addEventListener("load", function(){
+            ImageToPreview.setAttribute("src", this.result);
+        });
+
+        reader.readAsDataURL(file);
+    }
+    else{
+        defaultText.style.display = null;
+        ImageToPreview.style.display = null;
+        ImageToPreview.setAttribute("src", "");
+    }
+});

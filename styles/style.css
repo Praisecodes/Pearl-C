@@ -901,7 +901,22 @@ body {
   height: 230px;
   position: relative;
   border-radius: 50%;
-  border: 1px solid #2b2929;
+  border: 1px solid #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parentContainer .sideBar .profileImage .imageDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .parentContainer .sideBar .profileImage .imageDiv .changeImage {
@@ -1516,6 +1531,29 @@ body {
   color: #777;
 }
 
+.changeProfilePicContainer .changeProfilePicDiv .profilePicPreview img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.changeProfilePicContainer .changeProfilePicDiv .selectProfileImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .changeProfilePicContainer .changeProfilePicDiv .selectProfileImage .File {
   display: none;
 }
@@ -1543,7 +1581,7 @@ body {
   margin-right: 3px;
 }
 
-.changeProfilePicContainer .changeProfilePicDiv .update {
+.changeProfilePicContainer .changeProfilePicDiv .selectProfileImage .update {
   background-color: #8dcc2d;
   color: white;
   border: 0;
@@ -1613,7 +1651,22 @@ body {
   height: 200px;
   position: relative;
   border-radius: 50%;
-  border: 1px solid #2b2929;
+  border: 1px solid #777;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileProfileImage .mobileImageDiv .mobileChangeImage {
