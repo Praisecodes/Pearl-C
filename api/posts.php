@@ -10,16 +10,30 @@
         $result = $stmt->get_result();
 
         if($result->num_rows > 0){
-            while($rows = $result->fetch_assoc()){
-                $data[$i]["postTitle"] = $rows["Title"];
-                $data[$i]["postCategory"] = $rows["Category"];
-                $data[$i]["timePosted"] = $rows["timePosted"];
-                $data[$i]["postBody"] = $rows["Body"];
+            if($result->num_rows > 1){
+                while($rows = $result->fetch_assoc()){
+                    $data[$i]["id"] = $rows["id"];
+                    $data[$i]["postTitle"] = $rows["Title"];
+                    $data[$i]["postCategory"] = $rows["Category"];
+                    $data[$i]["datePosted"] = $rows["datePosted"];
+                    $data[$i]["postBody"] = $rows["Body"];
+    
+                    $i++;
+                }
 
-                $i++;
+                exit(json_encode($data));
             }
+            else{
+                while($rows = $result->fetch_assoc()){
+                    $data["id"] = $rows["id"];
+                    $data["postTitle"] = $rows["Title"];
+                    $data["postCategory"] = $rows["Category"];
+                    $data["datePosted"] = $rows["datePosted"];
+                    $data["postBody"] = $rows["Body"];
+                }
 
-            echo json_encode($data);
+                exit(json_encode($data));
+            }
         }
         else{
             exit(json_encode([
