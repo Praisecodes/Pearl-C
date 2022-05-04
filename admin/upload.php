@@ -15,7 +15,7 @@
 
             if($fileExtension == "jpg"){
                 if($fileError === 0){
-                    if($fileSize <= 300000){
+                    if($fileSize <= 5000000){
                         $fileNewName = "profileImage" . "." . $fileExtension;
                         
                         $fileDestination = "user/" . $fileNewName;
