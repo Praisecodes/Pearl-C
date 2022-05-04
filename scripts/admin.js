@@ -25,6 +25,56 @@ const deletePostDiv = document.querySelector(".deletePostDiv");
 const deletePostContainer = document.querySelector(".deletePostContainer");
 const deleteBtn = document.querySelector(".delete");
 
+
+/**
+ * This point handles the population of blog posts and also side bar blog post list
+ */
+const workareaPosts = document.querySelectorAll(".workareaPosts");
+const Posts = document.querySelectorAll(".posts");
+
+window.addEventListener('load', function(){
+    setInterval(() => {
+        Posts.forEach((post)=>{
+            post.remove();
+        });
+        workareaPosts.forEach((workareaPost)=>{
+            workareaPost.remove();
+        });
+
+        fetch("./api/posts.php")
+        .then(res=>res.json())
+        .then((data)=>{
+            if(data == "No Posts Available"){
+                console.log(data);
+            }
+            else if(data == "Error Getting Posts"){
+                console.log(data);
+            }
+            else if(data == "Error Connecting To Database"){
+                console.log(data);
+            }
+            else{
+                data.forEach((dataPost)=>{
+                    let {id, postTitle, postCategory, datePosted, postBody} = dataPost;
+
+                    let postdiv = `<div class="posts">
+                                        <h2>${postTitle}</h2>
+                                        <h4>${postCategory}</h4>
+                                        <p>${postBody}</p>
+                                        <p>${datePosted}</p>
+                                    </div>`;
+
+                    allPosts.innerHTML += postdiv;
+                });
+            }
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+    }, 10000);
+});
+// End of population code.
+
 //Variables to store the title and category
 let title = "", category = "";
 
