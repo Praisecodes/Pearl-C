@@ -6,9 +6,9 @@
     if($contentType === "application/json"){
         $contents = trim(file_get_contents("php://input"));
 
-        $decoded = json_decode($contents);
+        $decoded = json_decode($contents, true);
 
-        
+
     }
     else{
         exit(json_encode([
