@@ -24,60 +24,33 @@ const cat = document.querySelector(".cat");
 const deletePostDiv = document.querySelector(".deletePostDiv");
 const deletePostContainer = document.querySelector(".deletePostContainer");
 const deleteBtn = document.querySelector(".delete");
-
+const workareaPosts = document.querySelectorAll(".workareaPosts");
+const Posts = allPosts.querySelectorAll(".posts");
 
 /**
  * This point handles the population of blog posts and also side bar blog post list
  */
-const workareaPosts = document.querySelectorAll(".workareaPosts");
-const Posts = allPosts.querySelectorAll(".posts");
-
 window.addEventListener('load', function(){
-    setInterval(() => {
-        Posts.forEach((post)=>{
-            post.remove();
-        });
-        workareaPosts.forEach((workareaPost)=>{
-            workareaPost.remove();
-        });
-
-        fetch("../api/posts.php")
-        .then(res=>res.json())
-        .then((data)=>{
-            if(data == "No Posts Available"){
-                console.log(data);
-            }
-            else if(data == "Error Getting Posts"){
-                console.log(data);
-            }
-            else if(data == "Error Connecting To Database"){
-                console.log(data);
-            }
-            else{
-                if(data.length > 1){
-                    data.forEach((dataPost)=>{
-                        let {id, postTitle, postCategory, datePosted, postBody} = dataPost;
-    
-                        let postTime = datePosted.split(" ")[1];
-                        let postDate = datePosted.split(" ")[0];
-    
-                        let postdiv = `<div class="posts">
-                                            <h2>${postTitle}</h2>
-                                            <h4>${postCategory}</h4>
-                                            <p>${postBody}</p>
-                                            <p>${postTime}</p>
-                                            <p>${postDate}</p>
-                                        </div>`;
-    
-                        allPosts.innerHTML += postdiv;
-                    });
-                }
-                else{
-                    let {id, postTitle, postCategory, datePosted, postBody} = data;
+    fetch("../api/posts.php")
+    .then(res => res.json())
+    .then((data)=>{
+        if(data == "No Posts Available"){
+            console.log(data);
+        }
+        else if(data == "Error Getting Posts"){
+            console.log(data);
+        }
+        else if(data == "Error Connecting To Database"){
+            console.log(data);
+        }
+        else{
+            if(data.length > 1){
+                data.forEach((dataPost) => {
+                    let {id, postTitle, postCategory, datePosted, postBody} = dataPost;
 
                     let postTime = datePosted.split(" ")[1];
                     let postDate = datePosted.split(" ")[0];
-    
+
                     let postdiv = `<div class="posts">
                                         <h2>${postTitle}</h2>
                                         <h4>${postCategory}</h4>
@@ -85,15 +58,30 @@ window.addEventListener('load', function(){
                                         <p>${postTime}</p>
                                         <p>${postDate}</p>
                                     </div>`;
-    
                     allPosts.innerHTML += postdiv;
-                }
+                });
             }
-        })
-        .catch((error)=>{
-            console.log(error);
-        });
-    }, 10000);
+            else{
+                let {id, postTitle, postCategory, datePosted, postBody} = data;
+
+                let postTime = datePosted.split(" ")[1];
+                let postDate = datePosted.split(" ")[0];
+
+                let postdiv = `<div class="posts">
+                                    <h2>${postTitle}</h2>
+                                    <h4>${postCategory}</h4>
+                                    <p>${postBody}</p>
+                                    <p>${postTime}</p>
+                                    <p>${postDate}</p>
+                                </div>`;
+
+                allPosts.innerHTML += postdiv;
+            }
+        }
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
 });
 // End of population code.
 

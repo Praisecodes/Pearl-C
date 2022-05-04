@@ -1,7 +1,7 @@
 <?php
     require_once "./connection.php";
 
-    $sql = "SELECT * FROM posts;";
+    $sql = "SELECT * FROM posts ORDER BY id DESC";
     $data = array();
     $i = 0;
 
