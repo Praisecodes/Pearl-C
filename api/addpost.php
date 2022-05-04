@@ -7,6 +7,8 @@
         $contents = trim(file_get_contents("php://input"));
 
         $decoded = json_decode($contents);
+
+        
     }
     else{
         exit(json_encode([
