@@ -50,12 +50,14 @@ window.addEventListener('load', function(){
 
                     let postTime = datePosted.split(" ")[1];
                     let postDate = datePosted.split(" ")[0];
+                    let displayTime = postTime.split(":")[0];
+                    displayTime += ":" + postTime.split(":")[1];
 
                     let postdiv = `<div class="posts">
                                         <h2>${postTitle}</h2>
                                         <h4>${postCategory}</h4>
                                         <p>${postBody}</p>
-                                        <p>${postTime}</p>
+                                        <p>${displayTime}</p>
                                         <p>${postDate}</p>
                                     </div>`;
                     allPosts.innerHTML += postdiv;
