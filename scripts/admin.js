@@ -30,7 +30,7 @@ const deleteBtn = document.querySelector(".delete");
  * This point handles the population of blog posts and also side bar blog post list
  */
 const workareaPosts = document.querySelectorAll(".workareaPosts");
-const Posts = document.querySelectorAll(".posts");
+const Posts = allPosts.querySelectorAll(".posts");
 
 window.addEventListener('load', function(){
     setInterval(() => {
@@ -41,7 +41,7 @@ window.addEventListener('load', function(){
             workareaPost.remove();
         });
 
-        fetch("./api/posts.php")
+        fetch("../api/posts.php")
         .then(res=>res.json())
         .then((data)=>{
             if(data == "No Posts Available"){
@@ -54,18 +54,40 @@ window.addEventListener('load', function(){
                 console.log(data);
             }
             else{
-                data.forEach((dataPost)=>{
-                    let {id, postTitle, postCategory, datePosted, postBody} = dataPost;
+                if(data.length > 1){
+                    data.forEach((dataPost)=>{
+                        let {id, postTitle, postCategory, datePosted, postBody} = dataPost;
+    
+                        let postTime = datePosted.split(" ")[1];
+                        let postDate = datePosted.split(" ")[0];
+    
+                        let postdiv = `<div class="posts">
+                                            <h2>${postTitle}</h2>
+                                            <h4>${postCategory}</h4>
+                                            <p>${postBody}</p>
+                                            <p>${postTime}</p>
+                                            <p>${postDate}</p>
+                                        </div>`;
+    
+                        allPosts.innerHTML += postdiv;
+                    });
+                }
+                else{
+                    let {id, postTitle, postCategory, datePosted, postBody} = data;
 
+                    let postTime = datePosted.split(" ")[1];
+                    let postDate = datePosted.split(" ")[0];
+    
                     let postdiv = `<div class="posts">
                                         <h2>${postTitle}</h2>
                                         <h4>${postCategory}</h4>
                                         <p>${postBody}</p>
-                                        <p>${datePosted}</p>
+                                        <p>${postTime}</p>
+                                        <p>${postDate}</p>
                                     </div>`;
-
+    
                     allPosts.innerHTML += postdiv;
-                });
+                }
             }
         })
         .catch((error)=>{
