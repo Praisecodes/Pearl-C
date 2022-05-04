@@ -1,7 +1,7 @@
 <?php
 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
-        if(isset($_POST["Image"]) && isset($_POST["update"])){
+        if(isset($_POST["update"])){
             $file = $_FILES["Image"];
 
             $fileTmpName = $file["tmp_name"];
@@ -15,14 +15,15 @@
 
             if($fileExtension == "jpg"){
                 if($fileError === 0){
-                    if($fileSize <= 2048){
+                    if($fileSize <= 300000){
                         $fileNewName = "profileImage" . "." . $fileExtension;
                         
                         $fileDestination = "user/" . $fileNewName;
                         move_uploaded_file($fileTmpName, $fileDestination);
+                        header("Location: ./");
                     }
                     else{
-                        echo "Please Choose A file of 2mb maximum size";
+                        print_r($file);
                     }
                 }
                 else{
