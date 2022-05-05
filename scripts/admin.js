@@ -85,11 +85,15 @@ window.addEventListener('load', function(){
                 let postDate = datePosted.split(" ")[0];
 
                 let postdiv = `<div class="posts">
-                                    <h2>${postTitle}</h2>
-                                    <h4>${postCategory}</h4>
-                                    <p>${postBody}</p>
-                                    <p>${postTime}</p>
-                                    <p>${postDate}</p>
+                                    <button class="postDeleteBtn" title="Delete Post"><i class="fa fa-trash"></i></button>
+                                    <div class="imageDiv>
+                                        <img src="" alt="Blog Post Image" class="BlogPostImage">
+                                    </div>
+                                    <div class="BlogInfo">
+                                        <h3>${postTitle}</h3>
+                                        <p class="theDate">${postDate}</p>
+                                        <p class="theTime">${displayTime}</p>
+                                    </div>
                                 </div>`;
 
                 allPosts.innerHTML += postdiv;
