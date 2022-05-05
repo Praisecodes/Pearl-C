@@ -103,7 +103,7 @@ window.addEventListener('load', function(){
 // End of population code.
 
 //Variables to store the title and category
-let title = "", category = "";
+let title = "", category = "", postsBody = "";
 
 blogRedirect.addEventListener("click", (e)=>{
     window.location = "../";
@@ -220,8 +220,35 @@ storyName.addEventListener('keyup', (e)=>{
 });
 
 // Create Post Functions
+const postBtn = document.querySelector(".post");
+const postBodyElement = document.querySelector(".postBody");
 
+postsBody = postBodyElement.value;
+// postBody = postBody.split("\n").join("<br/>");
 
+postBtn.addEventListener('click', (e)=>{
+    let postDetails = {
+        "Title": title,
+        "Category": category,
+        "Body": postsBody
+    };
+
+    console.log(postsBody);
+    fetch("../api/addpost.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postDetails)
+    })
+    .then(res=>res.json())
+    .then((data)=>{
+        console.log(data);
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+})
 
 
 
