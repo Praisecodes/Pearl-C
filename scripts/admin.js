@@ -230,7 +230,7 @@ postBtn.addEventListener('click', (e)=>{
     let postDetails = {
         "Title": title,
         "Category": category,
-        "Body": (postBodyElement.value)
+        "Body": (postBodyElement.value).split("\n").join("<br/>")
     };
 
     console.log(postBodyElement.value);
