@@ -344,6 +344,9 @@
                     }
                     .post{
                         background-color: #45d145;
+                        .fa-spinner{
+                            animation: spin .4s;
+                        }
                     }
                     .delete{
                         background-color: #ee2828;

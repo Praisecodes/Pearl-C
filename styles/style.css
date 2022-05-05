@@ -1325,6 +1325,11 @@ body {
   background-color: #45d145;
 }
 
+.parentContainer .workarea .NewPostForms .editorDiv .buttons .post .fa-spinner {
+  -webkit-animation: spin .4s;
+          animation: spin .4s;
+}
+
 .parentContainer .workarea .NewPostForms .editorDiv .buttons .delete {
   background-color: #ee2828;
 }
