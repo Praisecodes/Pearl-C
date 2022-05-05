@@ -230,10 +230,10 @@ postBtn.addEventListener('click', (e)=>{
     let postDetails = {
         "Title": title,
         "Category": category,
-        "Body": postsBody
+        "Body": (postBodyElement.value)
     };
 
-    console.log(postsBody);
+    console.log(postBodyElement.value);
     fetch("../api/addpost.php", {
         method: "POST",
         headers: {
