@@ -26,16 +26,19 @@ const deletePostContainer = document.querySelector(".deletePostContainer");
 const deleteBtn = document.querySelector(".delete");
 const workareaPosts = document.querySelectorAll(".workareaPosts");
 const Posts = allPosts.querySelectorAll(".posts");
+const NoPosts = document.querySelector(".NoPosts");
 
 /**
  * This point handles the population of blog posts and also side bar blog post list
  */
+let i = 0;
+
 window.addEventListener('load', function(){
     fetch("../api/posts.php")
     .then(res => res.json())
     .then((data)=>{
         if(data == "No Posts Available"){
-            console.log(data);
+            NoPosts.style.display = "block";
         }
         else if(data == "Error Getting Posts"){
             console.log(data);
@@ -45,6 +48,10 @@ window.addEventListener('load', function(){
         }
         else{
             if(data.length > 1){
+                if(NoPosts){
+                    NoPosts.style.display = "none";
+                }
+                i = data.length;
                 data.forEach((dataPost) => {
                     let {id, postTitle, postCategory, datePosted, postBody} = dataPost;
 
@@ -54,16 +61,24 @@ window.addEventListener('load', function(){
                     displayTime += ":" + postTime.split(":")[1];
 
                     let postdiv = `<div class="posts">
-                                        <h2>${postTitle}</h2>
-                                        <h4>${postCategory}</h4>
-                                        <p>${postBody}</p>
-                                        <p>${displayTime}</p>
-                                        <p>${postDate}</p>
+                                        <button class="postDeleteBtn" title="Delete Post"><i class="fa fa-trash"></i></button>
+                                        <div class="imageDiv">
+                                            <img src="" alt="Blog Post Image" class="BlogPostImage">
+                                        </div>
+                                        <div class="BlogInfo">
+                                            <h3>${postTitle}</h3>
+                                            <p class="theDate">${postDate}</p>
+                                            <p class="theTime">${displayTime}</p>
+                                        </div>
                                     </div>`;
                     allPosts.innerHTML += postdiv;
                 });
             }
             else{
+                i = data.length;
+                if(NoPosts){
+                    NoPosts.style.display = "none";
+                }
                 let {id, postTitle, postCategory, datePosted, postBody} = data;
 
                 let postTime = datePosted.split(" ")[1];

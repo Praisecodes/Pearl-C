@@ -1067,7 +1067,6 @@ body {
 
 .parentContainer .workarea .allPosts {
   width: 95%;
-  border: 1px solid black;
   margin-left: 2.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1076,9 +1075,110 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 10px 0;
+}
+
+.parentContainer .workarea .allPosts .NoPosts {
+  color: #777;
+}
+
+.parentContainer .workarea .allPosts .posts {
+  width: 17.5rem;
+  position: relative;
+  height: 14rem;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 14px .5px #00000022;
+          box-shadow: 0 0 14px .5px #00000022;
+  margin: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.parentContainer .workarea .allPosts .posts:hover {
+  -webkit-transform: scale(102%);
+          transform: scale(102%);
+  -webkit-box-shadow: 0 0 14px 1px #00000022;
+          box-shadow: 0 0 14px 1px #00000022;
+}
+
+.parentContainer .workarea .allPosts .posts .postDeleteBtn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 4px;
+  right: 6px;
+  background-color: #c41e7f;
+  opacity: 0.3;
+  border: 0;
+  outline: 0;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.parentContainer .workarea .allPosts .posts .postDeleteBtn:hover {
+  opacity: 1;
+  -webkit-transform: scale(103%);
+          transform: scale(103%);
+}
+
+.parentContainer .workarea .allPosts .posts .imageDiv {
+  width: 99.8%;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.parentContainer .workarea .allPosts .posts .BlogInfo {
+  width: 99.8%;
+  height: 35%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #c74290;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.parentContainer .workarea .allPosts .posts .BlogInfo .theDate {
+  position: absolute;
+  bottom: 2px;
+  left: 2px;
+  color: white;
+  font-size: 13px;
+}
+
+.parentContainer .workarea .allPosts .posts .BlogInfo .theTime {
+  position: absolute;
+  bottom: 2px;
+  right: 14px;
+  color: white;
+  font-size: 13px;
 }
 
 .parentContainer .workarea .NewPostForms {
