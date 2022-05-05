@@ -14,7 +14,7 @@
         if($stmt->bind_param("sss", $decoded["Title"], $decoded["Category"], $decoded["Body"])){
             if($stmt->execute()){
                 echo json_encode([
-                    $decoded["Body"]
+                    "Success"
                 ]);
                 exit;
             }

@@ -227,6 +227,8 @@ postsBody = postBodyElement.value;
 // postBody = postBody.split("\n").join("<br/>");
 
 postBtn.addEventListener('click', (e)=>{
+    postBtn.innerHTML = '<i class="fa fa-spinner"></i>';
+
     let postDetails = {
         "Title": title,
         "Category": category,
@@ -243,7 +245,10 @@ postBtn.addEventListener('click', (e)=>{
     })
     .then(res=>res.json())
     .then((data)=>{
-        console.log(data);
+        if(data == "Success"){
+            postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
+            location.reload();
+        }
     })
     .catch((error)=>{
         console.log(error);
