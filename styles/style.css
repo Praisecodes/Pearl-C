@@ -1326,8 +1326,8 @@ body {
 }
 
 .parentContainer .workarea .NewPostForms .editorDiv .buttons .post .fa-spinner {
-  -webkit-animation: spin .4s;
-          animation: spin .4s;
+  -webkit-animation: spin 1s;
+          animation: spin 1s;
 }
 
 .parentContainer .workarea .NewPostForms .editorDiv .buttons .delete {

@@ -253,10 +253,12 @@ postBtn.addEventListener('click', (e)=>{
             postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
             location.reload();
         }
-        postBtn.innerHTML = 'ERROR!!';
-        setTimeout(() => {
-            postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
-        }, 4000);
+        else{
+            postBtn.innerHTML = 'ERROR!!';
+            setTimeout(() => {
+                postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
+            }, 4000);
+        }
     })
     .catch((error)=>{
         console.log(error);
