@@ -25,8 +25,44 @@ const deletePostDiv = document.querySelector(".deletePostDiv");
 const deletePostContainer = document.querySelector(".deletePostContainer");
 const deleteBtn = document.querySelector(".delete");
 const workareaPosts = document.querySelectorAll(".workareaPosts");
-const Posts = allPosts.querySelectorAll(".posts");
 const NoPosts = document.querySelector(".NoPosts");
+const confirmDeleteContainer = document.querySelector(".confirmDeleteContainer");
+const confirmDelete = document.querySelector(".confirmDelete");
+const closeConfirmBtn = document.querySelector(".closeConfirm");
+const okay = document.querySelector(".okay");
+const cancel = document.querySelector(".cancel");
+
+const closeConfirm = () => {
+    confirmDelete.classList.add("shrink");
+    confirmDelete.classList.remove("fullscale");
+
+    setTimeout(() => {
+        confirmDeleteContainer.style.display = "none";
+    }, 100);
+}
+
+closeConfirmBtn.addEventListener('click', closeConfirm)
+
+const ConfirmPostDelete = () => {
+    confirmDeleteContainer.style.display = "flex";
+
+    setTimeout(() => {
+        confirmDelete.classList.add("fullscale");
+        confirmDelete.classList.remove("shrink");
+    }, 0);
+
+    okay.addEventListener('click', ()=>{
+        closeConfirm();
+        return true;
+    });
+
+    cancel.addEventListener('click', ()=>{
+        closeConfirm();
+        return false;
+    });
+    return true;
+}
+
 
 /**
  * This point handles the population of blog posts and also side bar blog post list
@@ -66,13 +102,46 @@ window.addEventListener('load', function(){
                                             <img src="" alt="Blog Post Image" class="BlogPostImage">
                                         </div>
                                         <div class="BlogInfo">
-                                            <h3>${postTitle}</h3>
+                                            <h3 class="BlogTitle">${postTitle}</h3>
                                             <p class="theDate">${postDate}</p>
                                             <p class="theTime">${displayTime}</p>
                                         </div>
                                     </div>`;
                     allPosts.innerHTML += postdiv;
                 });
+
+                const postDeleteBtn = document.querySelectorAll(".postDeleteBtn");
+                const Posts = document.querySelectorAll(".posts");
+
+                postDeleteBtn.forEach((postDelBtn)=>{
+                    postDelBtn.addEventListener('click', ()=>{
+                        let postHeader = postDelBtn.parentElement.childNodes[5].childNodes[1].innerHTML;
+
+                        if(ConfirmPostDelete()){
+                            fetch("../api/deletepost.php", {
+                                method: "POST", 
+                                headers: {
+                                    "Content-Type": "application/json"
+                                }, 
+                                body: JSON.stringify({
+                                    "Title": postHeader
+                                })
+                            })
+                            .then(res=>res.json())
+                            .then((data)=>{
+                                if(data == "Success"){
+                                    postDelBtn.parentElement.remove();
+                                }
+                                else{
+                                    console.log(data);
+                                }
+                            })
+                            .catch((error)=>{
+                                console.log(error);
+                            })
+                        }
+                    })
+                })
             }
             else{
                 i = data.length;
@@ -105,6 +174,7 @@ window.addEventListener('load', function(){
     })
 });
 // End of population code.
+
 
 //Variables to store the title and category
 let title = "", category = "", postsBody = "";

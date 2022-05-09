@@ -510,6 +510,83 @@
     }
 }
 
+.confirmDeleteContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000022;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    display: none;
+    .confirmDelete{
+        width: 400px;
+        height: 250px;
+        position: relative;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 1px #1615153d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .3s;
+        h3{
+            text-align: center;
+        }
+        .closeConfirm{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top-right-radius: 5px;
+            background-color: #c41e7f;
+            width: 40px;
+            height: 40px;
+            color: white;
+            font-size: 16px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+        }
+        .buttonsDiv{
+            position: absolute;
+            bottom: 5px;
+            right: 3px;
+            display: flex;
+            width: 250px;
+            justify-content: space-evenly;
+            button{
+                border: 0;
+                outline: 0;
+                border-radius: 4px;
+                cursor: pointer;
+                width: 100px;
+                height: 40px;
+                font-size: 15px;
+                font-family: "Roboto-Light";
+                transition: .3s;
+                &:hover{
+                    transform: scale(105%);
+                }
+            }
+            .okay{
+                background-color: #db3131;
+                color: white;
+            }
+            .cancel{
+                background-color: transparent;
+                border: .5px solid #db3131;
+                &:hover{
+                    background-color: #db3131;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
 .changeProfilePicContainer{
     width: 100vw;
     height: 100vh;
