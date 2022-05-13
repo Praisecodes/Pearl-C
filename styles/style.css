@@ -846,14 +846,16 @@ body {
 
 h4 {
   height: 40px;
-  width: 0px;
+  width: 190px;
   background-color: #ff0000;
   color: white;
   font-family: "Roboto-Light";
   text-align: center;
   -webkit-transition: .3s;
   transition: .3s;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -863,6 +865,8 @@ h4 {
   position: fixed;
   right: 0;
   top: 30px;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
 }
 
 .parentContainer {

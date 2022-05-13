@@ -328,14 +328,11 @@ postBtn.addEventListener('click', (e)=>{
             postBtn.innerHTML = 'ERROR!!';
             AlreadyExists.style.display = "flex";
             setTimeout(()=>{
-                AlreadyExists.style.width = "190px";
+                AlreadyExists.style.transform = "translateX(0%)";
             }, 10);
             setTimeout(() => {
                 postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
-                AlreadyExists.style.width = "0px";
-                setTimeout(() => {
-                    AlreadyExists.style.display = "none";
-                }, 300);
+                AlreadyExists.style.transform = "translateX(200%)";
             }, 4000);
         }
         else{

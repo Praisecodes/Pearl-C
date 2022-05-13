@@ -22,18 +22,19 @@
 
 h4{
     height: 40px;
-    width: 0px;
+    width: 190px;
     background-color: #ff0000;
     color: white;
     font-family: "Roboto-Light";
     text-align: center;
     transition: .3s;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     right: 0;
     top: 30px;
+    transform: translateX(200%);
 }
 
 .parentContainer{
