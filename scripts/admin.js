@@ -32,6 +32,7 @@ const closeConfirmBtn = document.querySelector(".closeConfirm");
 const okay = document.querySelector(".okay");
 const cancel = document.querySelector(".cancel");
 const displayMessage = document.querySelector(".displayMessage");
+const AlreadyExists = document.querySelector(".AlreadyExists");
 
 const closeConfirm = () => {
     confirmDelete.classList.add("shrink");
@@ -309,7 +310,7 @@ postBtn.addEventListener('click', (e)=>{
         "Body": (postBodyElement.value).split("\n").join("<br/>")
     };
 
-    console.log(postBodyElement.value);
+    // console.log(postBodyElement.value);
     fetch("../api/addpost.php", {
         method: "POST",
         headers: {
@@ -322,6 +323,20 @@ postBtn.addEventListener('click', (e)=>{
         if(data == "Success"){
             postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
             location.reload();
+        }
+        else if(data == "This Title Already Exists"){
+            postBtn.innerHTML = 'ERROR!!';
+            AlreadyExists.style.display = "flex";
+            setTimeout(()=>{
+                AlreadyExists.style.width = "190px";
+            }, 10);
+            setTimeout(() => {
+                postBtn.innerHTML = 'POST <i class="fa fa-plus"></i>';
+                AlreadyExists.style.width = "0px";
+                setTimeout(() => {
+                    AlreadyExists.style.display = "none";
+                }, 300);
+            }, 4000);
         }
         else{
             postBtn.innerHTML = 'ERROR!!';
