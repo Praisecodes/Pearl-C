@@ -31,6 +31,7 @@ const confirmDelete = document.querySelector(".confirmDelete");
 const closeConfirmBtn = document.querySelector(".closeConfirm");
 const okay = document.querySelector(".okay");
 const cancel = document.querySelector(".cancel");
+const displayMessage = document.querySelector(".displayMessage");
 
 const closeConfirm = () => {
     confirmDelete.classList.add("shrink");
@@ -43,26 +44,21 @@ const closeConfirm = () => {
 
 closeConfirmBtn.addEventListener('click', closeConfirm)
 
-const ConfirmPostDelete = () => {
+const ConfirmPostDelete = (message) => {
     confirmDeleteContainer.style.display = "flex";
 
     setTimeout(() => {
         confirmDelete.classList.add("fullscale");
         confirmDelete.classList.remove("shrink");
+
+        displayMessage.innerHTML = `Are You Sure You Want To Delete ${message}`;
     }, 0);
-
-    // cancel.addEventListener('click', ()=>{
-    //     closeConfirm();
-    //     return false;
-    // });
-
-    // okay.addEventListener('click', ()=>{
-    //     closeConfirm();
-    //     return true;
-    // });
-
-    return ((okay.onclick)?true:false);
 }
+
+cancel.addEventListener('click', ()=>{
+    closeConfirm();
+    return false;
+});
 
 
 /**
@@ -118,7 +114,10 @@ window.addEventListener('load', function(){
                     postDelBtn.addEventListener('click', ()=>{
                         let postHeader = postDelBtn.parentElement.childNodes[5].childNodes[1].innerHTML;
 
-                        if(ConfirmPostDelete()){
+                        ConfirmPostDelete(postHeader);
+
+                        okay.addEventListener('click', ()=>{
+                            closeConfirm();
                             fetch("../api/deletepost.php", {
                                 method: "POST", 
                                 headers: {
@@ -140,10 +139,7 @@ window.addEventListener('load', function(){
                             .catch((error)=>{
                                 console.log(error);
                             })
-                        }
-                        else{
-                            console.log(ConfirmPostDelete());
-                        }
+                        })
                     })
                 })
             }

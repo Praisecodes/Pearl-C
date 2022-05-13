@@ -1581,8 +1581,8 @@ body {
 }
 
 .confirmDeleteContainer .confirmDelete {
-  width: 400px;
-  height: 250px;
+  width: 370px;
+  height: 200px;
   position: relative;
   background-color: white;
   border-radius: 5px;
@@ -1604,6 +1604,7 @@ body {
 
 .confirmDeleteContainer .confirmDelete h3 {
   text-align: center;
+  padding: 5px;
 }
 
 .confirmDeleteContainer .confirmDelete .closeConfirm {
@@ -1623,7 +1624,7 @@ body {
 
 .confirmDeleteContainer .confirmDelete .buttonsDiv {
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
   right: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
