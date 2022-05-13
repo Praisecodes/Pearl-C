@@ -51,16 +51,17 @@ const ConfirmPostDelete = () => {
         confirmDelete.classList.remove("shrink");
     }, 0);
 
-    okay.addEventListener('click', ()=>{
-        closeConfirm();
-        return true;
-    });
+    // cancel.addEventListener('click', ()=>{
+    //     closeConfirm();
+    //     return false;
+    // });
 
-    cancel.addEventListener('click', ()=>{
-        closeConfirm();
-        return false;
-    });
-    return true;
+    // okay.addEventListener('click', ()=>{
+    //     closeConfirm();
+    //     return true;
+    // });
+
+    return ((okay.onclick)?true:false);
 }
 
 
@@ -139,6 +140,9 @@ window.addEventListener('load', function(){
                             .catch((error)=>{
                                 console.log(error);
                             })
+                        }
+                        else{
+                            console.log(ConfirmPostDelete());
                         }
                     })
                 })
