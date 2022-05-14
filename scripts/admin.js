@@ -33,6 +33,11 @@ const okay = document.querySelector(".okay");
 const cancel = document.querySelector(".cancel");
 const displayMessage = document.querySelector(".displayMessage");
 const AlreadyExists = document.querySelector(".AlreadyExists");
+const previewPost = document.querySelector(".previewPost");
+const postPreviewTitle = document.querySelector(".postTitle");
+const postPreviewCategory = document.querySelector(".postCategory");
+const postBodySection = document.querySelector(".postBodySection");
+const cancelEdit = document.querySelector(".cancelEdit");
 
 const closeConfirm = () => {
     confirmDelete.classList.add("shrink");
@@ -60,6 +65,22 @@ cancel.addEventListener('click', ()=>{
     closeConfirm();
     return false;
 });
+
+const Preview = (postPrevTitle, postPrevCategory, postPrevBody) => {
+    allPosts.style.display = "none";
+    previewPost.style.display = "flex";
+
+    postPreviewTitle.innerHTML = postPrevTitle;
+    postPreviewCategory.innerHTML = `(${postPrevCategory})`;
+    postBodySection.innerHTML = postPrevBody;
+}
+
+const BackPreview = () => {
+    previewPost.style.display = "none";
+    allPosts.style.display = "flex";
+}
+
+cancelEdit.addEventListener('click', BackPreview);
 
 
 /**
@@ -110,6 +131,31 @@ window.addEventListener('load', function(){
 
                 const postDeleteBtn = document.querySelectorAll(".postDeleteBtn");
                 const Posts = document.querySelectorAll(".posts");
+
+                Posts.forEach((post)=>{
+                    post.addEventListener('click', ()=>{
+                        let postHeader = post.childNodes[5].childNodes[1].innerHTML;
+
+                        fetch("../api/getpost.php", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                "Title": postHeader
+                            })
+                        })
+                        .then(res=>res.json())
+                        .then((data)=>{
+                            let {Title, Category, datePosted, Body} = data;
+
+                            Preview(Title,Category,Body);
+                        })
+                        .catch((error)=>{
+                            console.log(error);
+                        });
+                    });
+                });
 
                 postDeleteBtn.forEach((postDelBtn)=>{
                     postDelBtn.addEventListener('click', ()=>{

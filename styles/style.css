@@ -824,6 +824,11 @@ body {
   src: url("../assets/Roboto-Light.ttf");
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/Roboto-Medium.ttf");
+}
+
 .showLeft {
   -webkit-transform: translate(-200%);
           transform: translate(-200%);
@@ -1357,6 +1362,108 @@ h4 {
 
 .parentContainer .workarea .NewPostForms .editorDiv .buttons .delete {
   background-color: #ee2828;
+}
+
+.parentContainer .workarea .previewPost {
+  width: 95%;
+  margin-left: 2.5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+}
+
+.parentContainer .workarea .previewPost .titleSection {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #00000055;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parentContainer .workarea .previewPost .titleSection h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.parentContainer .workarea .previewPost .postBodySection {
+  padding: 10px;
+  width: 100%;
+  font-family: "Roboto";
+  font-weight: lighter;
+}
+
+.parentContainer .workarea .previewPost .actionButtons {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parentContainer .workarea .previewPost .actionButtons .editPost {
+  border: 0;
+  outline: 0;
+  background-color: #c41e7f;
+  color: white;
+  font-size: 15px;
+  width: 90px;
+  height: 40px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-family: "Roboto";
+  cursor: pointer;
+}
+
+.parentContainer .workarea .previewPost .actionButtons .editPost:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+}
+
+.parentContainer .workarea .previewPost .actionButtons .cancelEdit {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: #02021a;
+  font-size: 15px;
+  width: 90px;
+  height: 40px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  font-family: "Roboto";
+  border: 1px solid #c41e7f;
+}
+
+.parentContainer .workarea .previewPost .actionButtons .cancelEdit:hover {
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  background-color: #c41e7f;
+  border: 0;
+  color: white;
 }
 
 .NewPostHeaderContainer {
