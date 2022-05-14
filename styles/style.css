@@ -2135,8 +2135,40 @@ h4 {
   font-size: 18px;
 }
 
+.mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts {
+  width: 100%;
+}
+
 .mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts h3 {
   color: #ffffff66;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts .sidePosts {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ffffff66;
+  cursor: pointer;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts .sidePosts p {
+  font-size: 20px;
+  padding: 0 0 0 10px;
+}
+
+.mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts .sidePosts i {
+  position: absolute;
+  top: 40%;
+  right: 5px;
 }
 
 @media screen and (max-width: 960px) {

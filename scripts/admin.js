@@ -39,6 +39,7 @@ const postPreviewCategory = document.querySelector(".postCategory");
 const postBodySection = document.querySelector(".postBodySection");
 const cancelEdit = document.querySelector(".cancelEdit");
 const allSideBarPosts = document.querySelector(".allSideBarPosts");
+const allMobileSideBarPosts = document.querySelector(".allMobileSideBarPosts");
 const NosidePost = document.querySelector(".NosidePost");
 const NoMobilesidePost = document.querySelector(".NoMobilesidePost");
 
@@ -138,11 +139,37 @@ window.addEventListener('load', function(){
                                         </div>`;
                     allPosts.innerHTML += postdiv;
                     allSideBarPosts.innerHTML += sidePostDiv;
-
+                    allMobileSideBarPosts.innerHTML +=sidePostDiv;
                 });
 
                 const postDeleteBtn = document.querySelectorAll(".postDeleteBtn");
                 const Posts = document.querySelectorAll(".posts");
+                const sidePosts = document.querySelectorAll(".sidePosts");
+
+                sidePosts.forEach((sidePost)=>{
+                    sidePost.addEventListener('click', ()=>{
+                        let postHeader = sidePost.childNodes[1].innerHTML;
+
+                        fetch("../api/getpost.php", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                "Title": postHeader
+                            })
+                        })
+                        .then(res=>res.json())
+                        .then((data)=>{
+                            let {Title, Category, datePosted, Body} = data;
+
+                            Preview(Title,Category,Body);
+                        })
+                        .catch((error)=>{
+                            console.log(error);
+                        });
+                    });
+                });
 
                 Posts.forEach((post)=>{
                     post.addEventListener('click', ()=>{
@@ -226,10 +253,66 @@ window.addEventListener('load', function(){
                                     </div>
                                 </div>`;
 
+                let sidePostDiv = `<div class="sidePosts">
+                                        <p>${postTitle}</p>
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>`;
+
                 allPosts.innerHTML += postdiv;
+                allSideBarPosts.innerHTML += sidePostDiv;
+                allMobileSideBarPosts.innerHTML += sidePostDiv;
 
                 const post = document.querySelector(".posts");
                 const postDeleteBtn = document.querySelector(".postDeleteBtn");
+                const sidePosts = document.querySelectorAll(".sidePosts");
+
+                sidePosts.forEach((sidePost)=>{
+                    sidePost.addEventListener('click', ()=>{
+                        let postHeader = sidePost.childNodes[1].innerHTML;
+
+                        fetch("../api/getpost.php", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json"
+                            },
+                            body: JSON.stringify({
+                                "Title": postHeader
+                            })
+                        })
+                        .then(res=>res.json())
+                        .then((data)=>{
+                            let {Title, Category, datePosted, Body} = data;
+
+                            Preview(Title,Category,Body);
+                        })
+                        .catch((error)=>{
+                            console.log(error);
+                        });
+                    });
+                });
+
+                post.addEventListener('click', ()=>{
+                    let postHeader = post.childNodes[5].childNodes[1].innerHTML;
+
+                    fetch("../api/getpost.php", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            "Title": postHeader
+                        })
+                    })
+                    .then(res=>res.json())
+                    .then((data)=>{
+                        let {Title, Category, datePosted, Body} = data;
+
+                        Preview(Title,Category,Body);
+                    })
+                    .catch((error)=>{
+                        console.log(error);
+                    });
+                });
 
                 postDeleteBtn.addEventListener('click', ()=>{
                     let postHeader = postDeleteBtn.parentElement.childNodes[5].childNodes[1].innerHTML;
