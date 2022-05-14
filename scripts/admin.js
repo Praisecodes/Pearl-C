@@ -38,6 +38,9 @@ const postPreviewTitle = document.querySelector(".postTitle");
 const postPreviewCategory = document.querySelector(".postCategory");
 const postBodySection = document.querySelector(".postBodySection");
 const cancelEdit = document.querySelector(".cancelEdit");
+const allSideBarPosts = document.querySelector(".allSideBarPosts");
+const NosidePost = document.querySelector(".NosidePost");
+const NoMobilesidePost = document.querySelector(".NoMobilesidePost");
 
 const closeConfirm = () => {
     confirmDelete.classList.add("shrink");
@@ -103,8 +106,10 @@ window.addEventListener('load', function(){
         }
         else{
             if(data.length > 1){
-                if(NoPosts){
+                if(NoPosts && NoMobilesidePost && NosidePost){
                     NoPosts.style.display = "none";
+                    NoMobilesidePost.style.display = "none";
+                    NosidePost.style.display = "none";
                 }
                 i = data.length;
                 data.forEach((dataPost) => {
@@ -126,7 +131,14 @@ window.addEventListener('load', function(){
                                             <p class="theTime">${displayTime}</p>
                                         </div>
                                     </div>`;
+
+                    let sidePostDiv = `<div class="sidePosts">
+                                            <p>${postTitle} <i class="fa fa-angle-right"></i></p>
+                                            
+                                        </div>`;
                     allPosts.innerHTML += postdiv;
+                    allSideBarPosts.innerHTML += sidePostDiv;
+
                 });
 
                 const postDeleteBtn = document.querySelectorAll(".postDeleteBtn");
