@@ -136,8 +136,28 @@ h4{
             }
 
             .allSideBarPosts{
+                width: 100%;
                 h3{
                     color: #ffffff66;
+                }
+                .sidePosts{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    height: 50px;
+                    border-bottom: 1px solid #ffffff66;
+                    cursor: pointer;
+                    p{
+                        font-size: 20px;
+                        padding: 0 0 0 10px;
+                    }
+                    i{
+                        position: absolute;
+                        top: 40%;
+                        right: 5px;
+                    }
                 }
             }
         }

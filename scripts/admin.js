@@ -133,8 +133,8 @@ window.addEventListener('load', function(){
                                     </div>`;
 
                     let sidePostDiv = `<div class="sidePosts">
-                                            <p>${postTitle} <i class="fa fa-angle-right"></i></p>
-                                            
+                                            <p>${postTitle}</p>
+                                            <i class="fa fa-angle-right"></i>
                                         </div>`;
                     allPosts.innerHTML += postdiv;
                     allSideBarPosts.innerHTML += sidePostDiv;
