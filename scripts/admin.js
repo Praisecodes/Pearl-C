@@ -139,10 +139,10 @@ window.addEventListener('load', function(){
                             })
                             .catch((error)=>{
                                 console.log(error);
-                            })
-                        })
-                    })
-                })
+                            });
+                        });
+                    });
+                });
             }
             else{
                 i = data.length;
@@ -153,10 +153,12 @@ window.addEventListener('load', function(){
 
                 let postTime = datePosted.split(" ")[1];
                 let postDate = datePosted.split(" ")[0];
+                let displayTime = postTime.split(":")[0];
+                displayTime += ":" + postTime.split(":")[1];
 
                 let postdiv = `<div class="posts">
                                     <button class="postDeleteBtn" title="Delete Post"><i class="fa fa-trash"></i></button>
-                                    <div class="imageDiv>
+                                    <div class="imageDiv">
                                         <img src="" alt="Blog Post Image" class="BlogPostImage">
                                     </div>
                                     <div class="BlogInfo">
@@ -167,6 +169,41 @@ window.addEventListener('load', function(){
                                 </div>`;
 
                 allPosts.innerHTML += postdiv;
+
+                const post = document.querySelector(".posts");
+                const postDeleteBtn = document.querySelector(".postDeleteBtn");
+
+                postDeleteBtn.addEventListener('click', ()=>{
+                    let postHeader = postDeleteBtn.parentElement.childNodes[5].childNodes[1].innerHTML;
+
+                    ConfirmPostDelete(postHeader);
+
+                    okay.addEventListener('click', (e)=>{
+                        closeConfirm();
+                        fetch("../api/deletepost.php", {
+                            method: "POST", 
+                            headers: {
+                                "Content-Type": "application/json"
+                            }, 
+                            body: JSON.stringify({
+                                "Title": postHeader
+                            })
+                        })
+                        .then(res=>res.json())
+                        .then((data)=>{
+                            if(data == "Success"){
+                                postDeleteBtn.parentElement.remove();
+                                NoPosts.style.display = "block";  //This line of code doesn't work I don't know why
+                            }
+                            else{
+                                console.log(data);
+                            }
+                        })
+                        .catch((error)=>{
+                            console.log(error);
+                        });
+                    });
+                });
             }
         }
     })
