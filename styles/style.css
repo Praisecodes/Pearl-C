@@ -2163,6 +2163,7 @@ h4 {
 .mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts .sidePosts p {
   font-size: 20px;
   padding: 0 0 0 10px;
+  text-transform: capitalize;
 }
 
 .mobileSideBarContainer .mobileSideBar .mobileSideBarPosts .allMobileSideBarPosts .sidePosts i {
